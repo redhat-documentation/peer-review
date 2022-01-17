@@ -2,20 +2,22 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.12">
-<title>Peer Review Guide</title>
+<meta name="generator" content="Asciidoctor 1.5.6.1">
+<title>Peer review guide</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
-/* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
-/* Uncomment @import statement to use as custom stylesheet */
+/* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
+/* Remove comment around @import statement below when using as a custom stylesheet */
 /*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
-article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}
-audio,video{display:inline-block}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
+audio,canvas,video{display:inline-block}
 audio:not([controls]){display:none;height:0}
+[hidden],template{display:none}
+script{display:none!important}
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
-a{background:none}
+a{background:transparent}
 a:focus{outline:thin dotted}
 a:active,a:hover{outline:0}
 h1{font-size:2em;margin:.67em 0}
@@ -42,12 +44,14 @@ button,select{text-transform:none}
 button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
 button[disabled],html input[disabled]{cursor:default}
 input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
 button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
 textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
-*,*::before,*::after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{font-size:100%}
-body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;word-wrap:anywhere;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
 a:hover{cursor:pointer}
 img,object,embed{max-width:100%;height:auto}
 object,embed{height:100%}
@@ -62,11 +66,14 @@ img{-ms-interpolation-mode:bicubic}
 img,object,svg{display:inline-block;vertical-align:middle}
 textarea{height:auto;min-height:50px}
 select{width:100%}
+.center{margin-left:auto;margin-right:auto}
+.spread{width:100%}
+p.lead,.paragraph.lead>p,#preamble>.sectionbody>.paragraph:first-of-type p{font-size:1.21875em;line-height:1.6}
 .subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
-div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0;direction:ltr}
 a{color:#2156a5;text-decoration:underline;line-height:inherit}
 a:hover,a:focus{color:#1d4b8f}
-a img{border:0}
+a img{border:none}
 p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
 p aside{font-size:.875em;line-height:1.35;font-style:italic}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
@@ -76,7 +83,7 @@ h2{font-size:1.6875em}
 h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
 h4,h5{font-size:1.125em}
 h6{font-size:1em}
-hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
+hr{border:solid #ddddd8;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
 em,i{font-style:italic;line-height:inherit}
 strong,b{font-weight:bold;line-height:inherit}
 small{font-size:60%;line-height:inherit}
@@ -95,38 +102,32 @@ abbr,acronym{text-transform:uppercase;font-size:90%;color:rgba(0,0,0,.8);border-
 abbr{text-transform:none}
 blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
 blockquote cite{display:block;font-size:.9375em;color:rgba(0,0,0,.6)}
-blockquote cite::before{content:"\2014 \0020"}
+blockquote cite:before{content:"\2014 \0020"}
 blockquote cite a,blockquote cite a:visited{color:rgba(0,0,0,.6)}
 blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
-@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+@media only screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
 h1{font-size:2.75em}
 h2{font-size:2.3125em}
 h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
 h4{font-size:1.4375em}}
-table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede;word-wrap:normal}
-table thead,table tfoot{background:#f7f8f7}
+table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
+table thead,table tfoot{background:#f7f8f7;font-weight:bold}
 table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
 table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
-table tr.even,table tr.alt{background:#f8f8f7}
-table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{line-height:1.6}
+table tr.even,table tr.alt,table tr:nth-of-type(even){background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
 h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
-.center{margin-left:auto;margin-right:auto}
-.stretch{width:100%}
-.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
-.clearfix::after,.float-group::after{clear:both}
-:not(pre).nobreak{word-wrap:normal}
-:not(pre).nowrap{white-space:nowrap}
-:not(pre).pre-wrap{white-space:pre-wrap}
-:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
-pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
-pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
-pre>code{display:block}
-pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
+.clearfix:before,.clearfix:after,.float-group:before,.float-group:after{content:" ";display:table}
+.clearfix:after,.float-group:after{clear:both}
+*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
+*:not(pre)>code.nobreak{word-wrap:normal}
+*:not(pre)>code.nowrap{white-space:nowrap}
+pre,pre>code{line-height:1.45;color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;text-rendering:optimizeSpeed}
 em em{font-style:normal}
 strong strong{font-weight:400}
 .keyseq{color:rgba(51,51,51,.8)}
-kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
 .keyseq kbd:first-child{margin-left:0}
 .keyseq kbd:last-child{margin-right:0}
 .menuseq,.menuref{color:#000}
@@ -134,29 +135,29 @@ kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-bl
 .menuseq{word-spacing:-.02em}
 .menuseq b.caret{font-size:1.25em;line-height:.8}
 .menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
-b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
-b.button::before{content:"[";padding:0 3px 0 2px}
-b.button::after{content:"]";padding:0 2px 0 3px}
+b.button:before,b.button:after{position:relative;top:-1px;font-weight:400}
+b.button:before{content:"[";padding:0 3px 0 2px}
+b.button:after{content:"]";padding:0 2px 0 3px}
 p a>code:hover{color:rgba(0,0,0,.9)}
 #header,#content,#footnotes,#footer{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
-#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
-#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
+#header:before,#header:after,#content:before,#content:after,#footnotes:before,#footnotes:after,#footer:before,#footer:after{content:" ";display:table}
+#header:after,#content:after,#footnotes:after,#footer:after{clear:both}
 #content{margin-top:1.25em}
-#content::before{content:none}
+#content:before{content:none}
 #header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
-#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
-#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
-#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #ddddd8}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #ddddd8;padding-bottom:8px}
+#header .details{border-bottom:1px solid #ddddd8;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
 #header .details span:first-child{margin-left:-.125em}
 #header .details span.email a{color:rgba(0,0,0,.85)}
 #header .details br{display:none}
-#header .details br+span::before{content:"\00a0\2013\00a0"}
-#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
-#header .details br+span#revremark::before{content:"\00a0|\00a0"}
+#header .details br+span:before{content:"\00a0\2013\00a0"}
+#header .details br+span.author:before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark:before{content:"\00a0|\00a0"}
 #header #revnumber{text-transform:capitalize}
-#header #revnumber::after{content:"\00a0"}
-#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
-#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
+#header #revnumber:after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #ddddd8;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #efefed;padding-bottom:.5em}
 #toc>ul{margin-left:.125em}
 #toc ul.sectlevel0>li>a{font-style:italic}
 #toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
@@ -165,16 +166,16 @@ p a>code:hover{color:rgba(0,0,0,.9)}
 #toc a{text-decoration:none}
 #toc a:active{text-decoration:underline}
 #toctitle{color:#7a2518;font-size:1.2em}
-@media screen and (min-width:768px){#toctitle{font-size:1.375em}
+@media only screen and (min-width:768px){#toctitle{font-size:1.375em}
 body.toc2{padding-left:15em;padding-right:0}
-#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2{margin-top:0!important;background-color:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #efefed;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
 #toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
 #toc.toc2>ul{font-size:.9em;margin-bottom:0}
 #toc.toc2 ul ul{margin-left:0;padding-left:1em}
 #toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
 body.toc2.toc-right{padding-left:0;padding-right:15em}
-body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
-@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #efefed;left:auto;right:0}}
+@media only screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
 #toc.toc2{width:20em}
 #toc.toc2 #toctitle{font-size:1.375em}
 #toc.toc2>ul{font-size:.95em}
@@ -183,100 +184,89 @@ body.toc2.toc-right{padding-left:0;padding-right:20em}}
 #content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
 #content #toc>:first-child{margin-top:0}
 #content #toc>:last-child{margin-bottom:0}
-#footer{max-width:none;background:rgba(0,0,0,.8);padding:1.25em}
+#footer{max-width:100%;background-color:rgba(0,0,0,.8);padding:1.25em}
 #footer-text{color:rgba(255,255,255,.8);line-height:1.44}
-#content{margin-bottom:.625em}
 .sect1{padding-bottom:.625em}
-@media screen and (min-width:768px){#content{margin-bottom:1.25em}
-.sect1{padding-bottom:1.25em}}
-.sect1:last-child{padding-bottom:0}
-.sect1+.sect1{border-top:1px solid #e7e7e9}
+@media only screen and (min-width:768px){.sect1{padding-bottom:1.25em}}
+.sect1+.sect1{border-top:1px solid #efefed}
 #content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
-#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1>a.anchor:before,h2>a.anchor:before,h3>a.anchor:before,#toctitle>a.anchor:before,.sidebarblock>.content>.title>a.anchor:before,h4>a.anchor:before,h5>a.anchor:before,h6>a.anchor:before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
 #content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
 #content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
 #content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
-details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
-details>summary:first-of-type{cursor:pointer;display:list-item;outline:none;margin-bottom:.75em}
+.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
 .admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
-table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
-.paragraph.lead>p,#preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
-table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:inherit}
+table.tableblock>caption.title{white-space:nowrap;overflow:visible;max-width:0}
+.paragraph.lead>p,#preamble>.sectionbody>.paragraph:first-of-type p{color:rgba(0,0,0,.85)}
+table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p{font-size:inherit}
 .admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
 .admonitionblock>table td.icon{text-align:center;width:80px}
-.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon img{max-width:initial}
 .admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
-.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #ddddd8;color:rgba(0,0,0,.6)}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
 .exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
 .exampleblock>.content>:first-child{margin-top:0}
 .exampleblock>.content>:last-child{margin-bottom:0}
-.sidebarblock{border-style:solid;border-width:1px;border-color:#dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;-webkit-border-radius:4px;border-radius:4px}
+.sidebarblock{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
 .sidebarblock>:first-child{margin-top:0}
 .sidebarblock>:last-child{margin-bottom:0}
 .sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
 .exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
-.literalblock pre,.listingblock>.content>pre{-webkit-border-radius:4px;border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
-@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
-@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
-.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class="highlight"],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
-.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
-.listingblock>.content{position:relative}
-.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
-.listingblock:hover code[data-lang]::before{display:block}
-.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
-.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
+.literalblock pre,.listingblock pre:not(.highlight),.listingblock pre[class="highlight"],.listingblock pre[class^="highlight "],.listingblock pre.CodeRay,.listingblock pre.prettyprint{background:#f7f7f8}
+.sidebarblock .literalblock pre,.sidebarblock .listingblock pre:not(.highlight),.sidebarblock .listingblock pre[class="highlight"],.sidebarblock .listingblock pre[class^="highlight "],.sidebarblock .listingblock pre.CodeRay,.sidebarblock .listingblock pre.prettyprint{background:#f2f1f1}
+.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;padding:1em;font-size:.8125em}
+.literalblock pre.nowrap,.literalblock pre[class].nowrap,.listingblock pre.nowrap,.listingblock pre[class].nowrap{overflow-x:auto;white-space:pre;word-wrap:normal}
+@media only screen and (min-width:768px){.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{font-size:.90625em}}
+@media only screen and (min-width:1280px){.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{font-size:1em}}
+.literalblock.output pre{color:#f7f7f8;background-color:rgba(0,0,0,.9)}
 .listingblock pre.highlightjs{padding:0}
 .listingblock pre.highlightjs>code{padding:1em;-webkit-border-radius:4px;border-radius:4px}
 .listingblock pre.prettyprint{border-width:0}
-.prettyprint{background:#f7f7f8}
-pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
-pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
-pre.prettyprint li code[data-lang]::before{opacity:1}
-pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
-table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
-table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
-table.linenotable td.code{padding-left:.75em}
-table.linenotable td.linenos{border-right:1px solid currentColor;opacity:.35;padding-right:.5em}
-pre.pygments .lineno{border-right:1px solid currentColor;opacity:.35;display:inline-block;margin-right:.75em}
-pre.pygments .lineno::before{content:"";margin-right:-.125em}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]:before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:#999}
+.listingblock:hover code[data-lang]:before{display:block}
+.listingblock.terminal pre .command:before{content:attr(data-prompt);padding-right:.5em;color:#999}
+.listingblock.terminal pre .command:not([data-prompt]):before{content:"$"}
+table.pyhltable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.pyhltable td{vertical-align:top;padding-top:0;padding-bottom:0;line-height:1.45}
+table.pyhltable td.code{padding-left:.75em;padding-right:0}
+pre.pygments .lineno,table.pyhltable td:not(.code){color:#999;padding-left:0;padding-right:.5em;border-right:1px solid #ddddd8}
+pre.pygments .lineno{display:inline-block;margin-right:.25em}
+table.pyhltable .linenodiv{background:none!important;padding-right:0!important}
 .quoteblock{margin:0 1em 1.25em 1.5em;display:table}
-.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
-.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock blockquote p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
 .quoteblock blockquote{margin:0;padding:0;border:0}
-.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote:before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
 .quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
-.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
-.verseblock{margin:0 1em 1.25em}
+.quoteblock .attribution{margin-top:.5em;margin-right:.5ex;text-align:right}
+.quoteblock .quoteblock{margin-left:0;margin-right:0;padding:.5em 0;border-left:3px solid rgba(0,0,0,.6)}
+.quoteblock .quoteblock blockquote{padding:0 0 0 .75em}
+.quoteblock .quoteblock blockquote:before{display:none}
+.verseblock{margin:0 1em 1.25em 1em}
 .verseblock pre{font-family:"Open Sans","DejaVu Sans",sans;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
 .verseblock pre strong{font-weight:400}
 .verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
 .quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
 .quoteblock .attribution br,.verseblock .attribution br{display:none}
 .quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
-.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
-.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
-.quoteblock.abstract{margin:0 1em 1.25em;display:block}
-.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
-.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
-.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
-.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
-.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;text-align:left;margin-right:0}
-p.tableblock:last-child{margin-bottom:0}
-td.tableblock>.content{margin-bottom:1.25em;word-wrap:anywhere}
-td.tableblock>.content>:last-child{margin-bottom:-1.25em}
+.quoteblock.abstract{margin:0 0 1.25em 0;display:block}
+.quoteblock.abstract blockquote,.quoteblock.abstract blockquote p{text-align:left;word-spacing:0}
+.quoteblock.abstract blockquote:before,.quoteblock.abstract blockquote p:first-of-type:before{display:none}
+table.tableblock{max-width:100%;border-collapse:separate}
+table.tableblock td>.paragraph:last-child p>p:last-child,table.tableblock th>p:last-child,table.tableblock td>p:last-child{margin-bottom:0}
 table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
-table.grid-all>*>tr>*{border-width:1px}
-table.grid-cols>*>tr>*{border-width:0 1px}
-table.grid-rows>*>tr>*{border-width:1px 0}
+table.grid-all>thead>tr>.tableblock,table.grid-all>tbody>tr>.tableblock{border-width:0 1px 1px 0}
+table.grid-all>tfoot>tr>.tableblock{border-width:1px 1px 0 0}
+table.grid-cols>*>tr>.tableblock{border-width:0 1px 0 0}
+table.grid-rows>thead>tr>.tableblock,table.grid-rows>tbody>tr>.tableblock{border-width:0 0 1px 0}
+table.grid-rows>tfoot>tr>.tableblock{border-width:1px 0 0 0}
+table.grid-all>*>tr>.tableblock:last-child,table.grid-cols>*>tr>.tableblock:last-child{border-right-width:0}
+table.grid-all>tbody>tr:last-child>.tableblock,table.grid-all>thead:last-child>tr>.tableblock,table.grid-rows>tbody>tr:last-child>.tableblock,table.grid-rows>thead:last-child>tr>.tableblock{border-bottom-width:0}
 table.frame-all{border-width:1px}
-table.frame-ends{border-width:1px 0}
 table.frame-sides{border-width:0 1px}
-table.frame-none>colgroup+*>:first-child>*,table.frame-sides>colgroup+*>:first-child>*{border-top-width:0}
-table.frame-none>:last-child>:last-child>*,table.frame-sides>:last-child>:last-child>*{border-bottom-width:0}
-table.frame-none>*>tr>:first-child,table.frame-ends>*>tr>:first-child{border-left-width:0}
-table.frame-none>*>tr>:last-child,table.frame-ends>*>tr>:last-child{border-right-width:0}
-table.stripes-all tr,table.stripes-odd tr:nth-of-type(odd),table.stripes-even tr:nth-of-type(even),table.stripes-hover tr:hover{background:#f8f8f7}
+table.frame-topbot{border-width:1px 0}
 th.halign-left,td.halign-left{text-align:left}
 th.halign-right,td.halign-right{text-align:right}
 th.halign-center,td.halign-center{text-align:center}
@@ -284,10 +274,11 @@ th.valign-top,td.valign-top{vertical-align:top}
 th.valign-bottom,td.valign-bottom{vertical-align:bottom}
 th.valign-middle,td.valign-middle{vertical-align:middle}
 table thead th,table tfoot th{font-weight:bold}
-tbody tr th{background:#f7f8f7}
+tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
 tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
 p.tableblock>code:only-child{background:none;padding:0}
 p.tableblock{font-size:1em}
+td>div.verse{white-space:pre}
 ol{margin-left:1.75em}
 ul li ol{margin-left:1.5em}
 dl dd{margin-left:1.125em}
@@ -299,8 +290,9 @@ ul.unstyled,ol.unstyled{margin-left:0}
 ul.checklist{margin-left:.625em}
 ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
 ul.checklist li>p:first-child>input[type="checkbox"]:first-child{margin-right:.25em}
-ul.inline{display:-ms-flexbox;display:-webkit-box;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
-ul.inline>li{margin-left:1.25em}
+ul.inline{margin:0 auto .625em auto;margin-left:-1.375em;margin-right:0;padding:0;list-style:none;overflow:hidden}
+ul.inline>li{list-style:none;float:left;margin-left:1.375em;display:block}
+ul.inline>li>*{display:block}
 .unstyled dl dt{font-weight:400;font-style:normal}
 ol.arabic{list-style-type:decimal}
 ol.decimal{list-style-type:decimal-leading-zero}
@@ -313,14 +305,13 @@ ol.lowergreek{list-style-type:lower-greek}
 .hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
 td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
 td.hdlist1{font-weight:bold;padding-bottom:1.25em}
-td.hdlist2{word-wrap:anywhere}
 .literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
-.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
-.colist td:not([class]):first-child img{max-width:none}
-.colist td:not([class]):last-child{padding:.25em 0}
+.colist>table tr>td:first-of-type{padding:.4em .75em 0 .75em;line-height:1;vertical-align:top}
+.colist>table tr>td:first-of-type img{max-width:initial}
+.colist>table tr>td:last-of-type{padding:.25em 0}
 .thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
-.imageblock.left{margin:.25em .625em 1.25em 0}
-.imageblock.right{margin:.25em 0 1.25em .625em}
+.imageblock.left,.imageblock[style*="float: left"]{margin:.25em .625em 1.25em 0}
+.imageblock.right,.imageblock[style*="float: right"]{margin:.25em 0 1.25em .625em}
 .imageblock>.title{margin-bottom:0}
 .imageblock.thumb,.imageblock.th{border-width:6px}
 .imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
@@ -333,9 +324,9 @@ sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:sup
 sup.footnote a,sup.footnoteref a{text-decoration:none}
 sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
 #footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
-#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
-#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
-#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em 0;border-width:1px 0 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;text-indent:-1.05em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none}
 #footnotes .footnote:last-of-type{margin-bottom:0}
 #content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
 .gist .file-data>table{border:0;background:#fff;width:100%;margin-bottom:0}
@@ -347,49 +338,49 @@ div.unbreakable{page-break-inside:avoid}
 .overline{text-decoration:overline}
 .line-through{text-decoration:line-through}
 .aqua{color:#00bfbf}
-.aqua-background{background:#00fafa}
+.aqua-background{background-color:#00fafa}
 .black{color:#000}
-.black-background{background:#000}
+.black-background{background-color:#000}
 .blue{color:#0000bf}
-.blue-background{background:#0000fa}
+.blue-background{background-color:#0000fa}
 .fuchsia{color:#bf00bf}
-.fuchsia-background{background:#fa00fa}
+.fuchsia-background{background-color:#fa00fa}
 .gray{color:#606060}
-.gray-background{background:#7d7d7d}
+.gray-background{background-color:#7d7d7d}
 .green{color:#006000}
-.green-background{background:#007d00}
+.green-background{background-color:#007d00}
 .lime{color:#00bf00}
-.lime-background{background:#00fa00}
+.lime-background{background-color:#00fa00}
 .maroon{color:#600000}
-.maroon-background{background:#7d0000}
+.maroon-background{background-color:#7d0000}
 .navy{color:#000060}
-.navy-background{background:#00007d}
+.navy-background{background-color:#00007d}
 .olive{color:#606000}
-.olive-background{background:#7d7d00}
+.olive-background{background-color:#7d7d00}
 .purple{color:#600060}
-.purple-background{background:#7d007d}
+.purple-background{background-color:#7d007d}
 .red{color:#bf0000}
-.red-background{background:#fa0000}
+.red-background{background-color:#fa0000}
 .silver{color:#909090}
-.silver-background{background:#bcbcbc}
+.silver-background{background-color:#bcbcbc}
 .teal{color:#006060}
-.teal-background{background:#007d7d}
+.teal-background{background-color:#007d7d}
 .white{color:#bfbfbf}
-.white-background{background:#fafafa}
+.white-background{background-color:#fafafa}
 .yellow{color:#bfbf00}
-.yellow-background{background:#fafa00}
+.yellow-background{background-color:#fafa00}
 span.icon>.fa{cursor:default}
 a span.icon>.fa{cursor:inherit}
 .admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
-.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
-.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
-.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
-.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
-.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
-.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:50%;border-radius:50%;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.admonitionblock td.icon .icon-note:before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip:before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning:before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution:before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important:before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background-color:rgba(0,0,0,.8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
 .conum[data-value] *{color:#fff!important}
 .conum[data-value]+b{display:none}
-.conum[data-value]::after{content:attr(data-value)}
+.conum[data-value]:after{content:attr(data-value)}
 pre .conum[data-value]{position:relative;top:-.125em}
 b.conum *{color:inherit!important}
 .conum:not([data-value]):empty{display:none}
@@ -399,633 +390,246 @@ p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
 p,blockquote,dt,td.content,span.alt{font-size:1.0625rem}
 p{margin-bottom:1.25rem}
 .sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
-.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.exampleblock>.content{background-color:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
 .print-only{display:none!important}
-@page{margin:1.25cm .75cm}
-@media print{*{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
-html{font-size:80%}
+@media print{@page{margin:1.25cm .75cm}
+*{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
 a{color:inherit!important;text-decoration:underline!important}
 a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
-a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
-abbr[title]::after{content:" (" attr(title) ")"}
+a[href^="http:"]:not(.bare):after,a[href^="https:"]:not(.bare):after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]:after{content:" (" attr(title) ")"}
 pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
 thead{display:table-header-group}
 svg{max-width:100%}
 p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
 h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
-#header,#content,#footnotes,#footer{max-width:none}
 #toc,.sidebarblock,.exampleblock>.content{background:none!important}
-#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
+#toc{border-bottom:1px solid #ddddd8!important;padding-bottom:0!important}
+.sect1{padding-bottom:0!important}
+.sect1+.sect1{border:0!important}
+#header>h1:first-child{margin-top:1.25rem}
 body.book #header{text-align:center}
-body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em 0}
 body.book #header .details{border:0!important;display:block;padding:0!important}
 body.book #header .details span:first-child{margin-left:0!important}
 body.book #header .details br{display:block}
-body.book #header .details br+span::before{content:none!important}
+body.book #header .details br+span:before{content:none!important}
 body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
 body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
-.listingblock code[data-lang]::before{display:block}
-#footer{padding:0 .9375em}
+.listingblock code[data-lang]:before{display:block}
+#footer{background:none!important;padding:0 .9375em}
+#footer-text{color:rgba(0,0,0,.6)!important;font-size:.9em}
 .hide-on-print{display:none!important}
 .print-only{display:block!important}
 .hide-for-print{display:none!important}
 .show-for-print{display:inherit!important}}
-@media print,amzn-kf8{#header>h1:first-child{margin-top:1.25rem}
-.sect1{padding:0!important}
-.sect1+.sect1{border:0}
-#footer{background:none}
-#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
-@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
 </head>
-<body id="peer-review-guide" class="article">
+<body class="book toc2 toc-left">
 <div id="header">
-<h1>Peer Review Guide</h1>
-<div id="toc" class="toc">
+<h1>Peer review guide</h1>
+<div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#general-information">1. General information</a>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#guidelines-creating-peer-review-process">Creating a peer review process</a>
 <ul class="sectlevel2">
-<li><a href="#how-to-use-this-document">1.1. How to use this document</a></li>
-<li><a href="#how-to-provide-feedback">1.2. How to provide feedback on the Peer Review Guide</a></li>
+<li><a href="#considerations-creating-peer-review-process">Considerations when creating a peer review process</a>
+<ul class="sectlevel3">
+<li><a href="#peer-review-optional-required">Is a peer review required or optional?</a></li>
+<li><a href="#who-are-peer-reviewers">Who are the peer reviewers?</a></li>
+<li><a href="#writer-request-review">How does a writer request a peer review?</a></li>
+<li><a href="#peer-reviewer-assigned">How is the peer reviewer assigned?</a></li>
+<li><a href="#level-scope-review">What is the level or scope of the peer review?</a></li>
+<li><a href="#checklist-for-reviewer">Is there a checklist for the peer reviewer to follow?</a></li>
+<li><a href="#platform-tools-used">What platform and tools are used to perform the review and give feedback?</a></li>
+<li><a href="#expected-turnaround-time">What is the expected turnaround time?</a></li>
+<li><a href="#urgent-peer-reviews-escalated">How do urgent peer reviews get escalated?</a></li>
+<li><a href="#peer-review-feedback-incorporated">How is peer review feedback incorporated?</a></li>
 </ul>
 </li>
-<li><a href="#peer-review-checklist">2. Peer review checklist</a></li>
-<li><a href="#peer-review-framework">3. Peer review framework</a>
-<ul class="sectlevel2">
-<li><a href="#first-level-issues">3.1. First-level issues - basic English</a></li>
-<li><a href="#second-level-issues">3.2. Second-level issues - stylistic issues</a></li>
-<li><a href="#third-level-issues">3.3. Third-level issues - content issues</a></li>
-<li><a href="#fourth-level-issues">3.4. Fourth-level issues</a></li>
-<li><a href="#other-things-to-review">3.5. Other things to review</a></li>
-<li><a href="#real-world-peer-reviews">3.6. Real-world peer reviews</a></li>
-<li><a href="#additional-resources">3.7. Additional resources</a></li>
+<li><a href="#finalizing-team-peer-review-process">Finalizing your team&#8217;s peer review process</a></li>
 </ul>
 </li>
-<li><a href="#tips-and-tricks">4. Peer review tips and tricks</a>
+<li><a href="#pros-cons-peer-review-platforms">Appendix A: Pros and cons of the different peer review platforms</a>
 <ul class="sectlevel2">
-<li><a href="#general-recommendations">4.1. General recommendations for peer review</a></li>
-<li><a href="#peer-review-methods">4.2. Peer review methods</a></li>
-<li><a href="#miscellaneous">4.3. Miscellaneous tips</a></li>
-<li><a href="#_faq">4.4. FAQ</a></li>
-</ul>
-</li>
-<li><a href="#about-levels">Appendix A: About levels of issues in the peer review framework</a></li>
-<li><a href="#_longer_examples_of_peer_review_framework_issues">Appendix B: Longer examples of peer review framework issues</a>
-<ul class="sectlevel2">
-<li><a href="#example-provide-all-the-required-information">B.1. The "Provide all the required information" example</a></li>
-<li><a href="#example-provide-information-to-a-new-reader-at-the-right-pace">B.2. The "Provide information to a new reader at the right pace" example</a></li>
-<li><a href="#example-tasks-reflect-the-intended-goal-of-the-user">B.3. The "Tasks reflect the intended goal of the user" example</a></li>
-<li><a href="#example-information-is-in-the-best-possible-location">B.4. The "Information is in the best possible location" example</a></li>
-<li><a href="#example-include-troubleshooting-and-error-recognition-steps-where-appropriate">B.5. The "Include troubleshooting and error recognition steps where appropriate" example</a></li>
+<li><a href="#github-gitlab">GitHub or GitLab</a></li>
+<li><a href="#google-docs">Google Docs</a></li>
+<li><a href="#email">Email</a></li>
+<li><a href="#irc-google-chat-slack">IRC, Google chat, or Slack</a></li>
+<li><a href="#jira-bugzilla">Jira or Bugzilla ticket</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 <div id="content">
-<div class="sect1">
-<h2 id="general-information">1. General information</h2>
+<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>This documentation provides information about reviewing the documents of your peers. It is intended for the technical writer and the reviewer. The reviewer learns about the scope and method of the review, and the technical writer learns what to expect from the review.</p>
-</div>
-<h3 id="peer-review-definition" class="discrete">Peer review definition</h3>
-<div class="paragraph">
-<p><strong>Peer review covers:</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Editorial clarity, correctness, and consistency of technical terminology. For more information about documentation conventions, see <a href="https://source.redhat.com/groups/public/ccs/ccs_wiki/ccs_style_guides_and_term_conventions">FAQ about style in CCS</a>.</p>
-</li>
-<li>
-<p>Structural clarity, focus, and completeness of information from the customer&#8217;s perspective. This can come from the Minimalism framework, and can be something that applies only to reviews from within your product team. For more information on the minimalism initiative, see <a href="https://source.redhat.com/groups/public/minimalism-quality-initiative">the Minimalism quality initiative</a>. This initiative works on gathering training information about minimalism.</p>
-</li>
-<li>
-<p>Modular structure, focus, and completeness of writing and information from the writer&#8217;s perspective. This can come from the modular documentation project. For more information on the modular documentation project, see <a href="https://redhat-documentation.github.io/modular-docs/">the Modular Documentation Reference Guide</a>. This project works on gathering training information about the modular documentation project.</p>
-</li>
-</ul>
+<p>This guide provides information about peer reviewing Red Hat product documentation.</p>
 </div>
 <div class="paragraph">
-<p><strong>Peer review does not cover:</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Technical accuracy in the sense of ”this represents the realities of the product being documented,” not technical verification.</p>
-</li>
-</ul>
-</div>
-<div class="sect2">
-<h3 id="how-to-use-this-document">1.1. How to use this document</h3>
-<div class="paragraph">
-<p>This document consists of the following main parts:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="#peer-review-checklist">Peer review checklist</a> - A condensed version of the Framework, which reviewers can use for quick reference. Make sure that you are familiar with the Framework first before using the Checklist.</p>
-</li>
-<li>
-<p><a href="#peer-review-framework">Peer review framework</a> - Lists things that reviewers should look at when providing a peer review, with examples and links to our CCS guidelines.</p>
-</li>
-<li>
-<p><a href="#tips-and-tricks">Peer review tips and tricks</a> - Provides additional information about the peer review process - what tools you can use and various insights and recommendations.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="how-to-provide-feedback">1.2. How to provide feedback on the Peer Review Guide</h3>
-<div class="paragraph">
-<p>Do you have any questions about this document or its contents? Is something unclear, incorrect, or missing? Please let us know by creating an <a href="https://gitlab.cee.redhat.com/ccs-internal-documentation/peer-review/issues">issue</a> in GitLab.</p>
-</div>
-<div class="paragraph">
-<p>To raise an <strong>issue</strong> about the Peer Review Guide for the Peer Review team to address:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Go to the CCS Peer Review project in <a href="https://gitlab.cee.redhat.com/ccs-internal-documentation/peer-review">GitLab</a>.</p>
-</li>
-<li>
-<p>Toggle to the <strong>Issues</strong> tab and click <strong>New Issue</strong> button.</p>
-</li>
-<li>
-<p>Add a title and a description for the issue. Include as much detail as possible in the <strong>Description</strong> field.</p>
-</li>
-<li>
-<p>Click <strong>Submit issue</strong> to submit your request to the Peer Review team.</p>
-</li>
-</ol>
-</div>
+<p>The Red Hat Customer Content Services team created this guide as part of its responsibility for producing product documentation for Red Hat customers. Upstream communities who want to align more closely with the standards used by Red Hat product documentation can also use this guide.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="peer-review-checklist">2. Peer review checklist</h2>
+<h2 id="introduction">Introduction</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>This checklist provides a condensed version of the framework, which reviewers can use for quick reference. Use this checklist only when you are already familiar with all the issues and examples listed in <a href="#peer-review-framework">Peer review framework</a>.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 90%;">
-<col style="width: 10%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p><strong>First-level issues</strong></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="#proper-english-grammar">Proper American English grammar</a></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="#correct-english-spelling">Correct American English spelling, no typos</a></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="#no-slang-or-non-english-words">No slang or non-English words</a></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="#proper-word-usage">Proper word usage</a></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="#acronyms-expanded-on-first-use">Acronyms expanded on first use</a></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="#named-entities-qualified-on-first-use">Named entities qualified on first use</a></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="#avoid-phrasal-verbs">Avoid phrasal verbs</a></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="#avoid-verbs-such-as-should-or-may">Avoid verbs such as should or may</a></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="#do-not-use-contractions">Do not use contractions</a></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p><strong>Second-level issues</strong></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="#no-unnecessary-passive-voice">No unnecessary passive voice</a></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="#no-unnecessary-future-tense">No unnecessary future tense</a></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="#sentences-are-not-too-long">Sentences are not too long</a></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="#effective-titles">Effective titles</a></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="#as-few-words-as-possible">As few words as possible</a></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p><strong>Third-level issues</strong></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="#no-ambiguity">No ambiguity</a></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="#no-sentences-with-low-information-value">No sentences with low information value</a></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="#structure-paragraphs-appropriately">Structure paragraphs appropriately</a></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="#one-idea-per-paragraph">One idea per paragraph</a></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="#sequence-of-information-is-logical">Sequence of information is logical</a></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="#information-has-an-appropriate-structure">Information has an appropriate structure</a></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="#use-admonitions-only-when-necessary">Use admonitions only when necessary</a></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p><strong>Fourth-level issues</strong></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="#meet-modular-guidelines">The overall structure meets modular guidelines</a></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="#sections-include-the-appropriate-amount-of-information">Sections include the appropriate amount of information</a></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="#provide-all-the-required-information">Provide all the required information</a></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="#do-not-include-any-unnecessary-information">Do not include any unnecessary information</a></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="#use-screenshots-and-other-visuals-where-required">Use screenshots and other visuals where required</a></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="#provide-information-to-a-new-reader-at-the-right-pace">Provide information to a new reader at the right pace</a></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="#the-document-is-appropriate-for-the-intended-audience">The document it appropriate for the intended audience</a></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="#tasks-reflect-the-intended-goal-of-the-user">Tasks reflect the intended goal of the user</a></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="#information-is-in-the-best-possible-location">Information is in the best possible location</a></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="#include-troubleshooting-and-error-recognition-steps-where-appropriate">Include troubleshooting and error recognition steps where appropriate</a></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="#apply-templates-if-the-team-uses-them">Apply templates if the team uses them</a></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="#the-content-is-accessible">The content is accessible</a></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
-</tr>
-</tbody>
-</table>
+
 </div>
 </div>
 <div class="sect1">
-<h2 id="peer-review-framework">3. Peer review framework</h2>
+<h2 id="guidelines-creating-peer-review-process">Creating a peer review process</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The peer review framework includes guiding principles and the issues that should be reviewed.</p>
+<p>Red Hat Customer Content Services does not follow one definitive peer review process. Each team within CCS is different, depending on factors such as workflows, preferred tools, release cycles, engineering team preferences, and so on. Each team must determine a peer review process that works for them.</p>
 </div>
-<h3 id="about-the-peer-review-framework" class="discrete">About the Peer review framework</h3>
 <div class="paragraph">
-<p>The peer review framework uses the following guiding principles:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><em>The IBM Style Guide</em> describes most of the writing rules to follow. Where possible, the framework provides guidance on where to find more information.</p>
-</li>
-<li>
-<p>Whenever possible, the framework includes links to examples and training modules. The <a href="https://source.redhat.com/groups/public/minimalism-quality-initiative">Minimalism quality initiative</a> handles the training modules.</p>
-</li>
-<li>
-<p>Issues are classified into four levels by complexity. The level numbers do not determine the order to follow while doing a peer review. Their main purpose is to organize issues from easy to advanced. You can start from whatever level you want. For example, it can be more effective to start with fourth-level and third-level issues when reviewing large sections or chapters.</p>
-<div class="paragraph">
-<p>In addition, levels are great for setting expectations when requesting a peer review. For example, you can come to a mutual agreement with the reviewer to concentrate on a particular level or levels only. For more details, see <a href="#about-levels">About levels of issues in the peer review framework</a>.</p>
-</div>
-</li>
-<li>
-<p>If necessary, individual teams are free to adjust the peer review framework to fit their needs (documentation format, time frame, and so on).</p>
-</li>
-</ul>
+<p>The most important thing is to define a process, so that peer reviews are used consistently throughout your team.</p>
 </div>
 <div class="sect2">
-<h3 id="first-level-issues">3.1. First-level issues - basic English</h3>
+<h3 id="considerations-creating-peer-review-process">Considerations when creating a peer review process</h3>
 <div class="paragraph">
-<p>First-level issues include rules that are specific and unambiguous, often based on enumeration and lists. Violations are mostly trivial to fix and often automatically detectable.</p>
+<p>You must consider many factors before you set up a peer review process so that the process meets the needs of your team.</p>
 </div>
 <div class="paragraph">
-<p>The following sections contain a list of first-level issues:</p>
-</div>
-<div class="sect3">
-<h4 id="proper-english-grammar">3.1.1. Use proper American English grammar</h4>
-<div class="paragraph">
-<p>Make sure that the documentation is written according to the official style guides:</p>
+<p>Review the following factors:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><em>The IBM Style Guide</em> - an overview of which is <a href="https://docs.engineering.redhat.com/pages/viewpage.action?spaceKey=CCSENABLE&amp;title=IBM+Style+Guide%3A+quick+reference">available for quick reference</a></p>
+<p><a href="#peer-review-optional-required">Is a peer review required or optional?</a></p>
 </li>
 <li>
-<p><a href="https://redhat-documentation.github.io/supplementary-style-guide/#glossary-terms-conventions">Red Hat supplementary style guide for product documentation</a>, which includes a Glossary of terms and conventions</p>
+<p><a href="#who-are-peer-reviewers">Who are the peer reviewers?</a></p>
+</li>
+<li>
+<p><a href="#writer-request-review">How does a writer request a peer review?</a></p>
+</li>
+<li>
+<p><a href="#peer-reviewer-assigned">How is the peer reviewer assigned?</a></p>
+</li>
+<li>
+<p><a href="#level-scope-review">What is the level or scope of the peer review?</a></p>
+</li>
+<li>
+<p><a href="#checklist-for-reviewer">Is there a checklist for the peer reviewer to follow?</a></p>
+</li>
+<li>
+<p><a href="#platform-tools-used">What platform and tools are used to perform the review and give feedback?</a></p>
+</li>
+<li>
+<p><a href="#expected-turnaround-time">What is the expected turnaround time?</a></p>
+</li>
+<li>
+<p><a href="#urgent-peer-reviews-escalated">How do urgent peer reviews get escalated?</a></p>
+</li>
+<li>
+<p><a href="#peer-review-feedback-incorporated">How is peer review feedback incorporated?</a></p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="peer-review-optional-required">Is a peer review required or optional?</h4>
+<div class="paragraph">
+<p>Determine whether requesting a peer review is required or optional. A manager, Documentation Program Manager (DPM), or Content Stategist (CS) should communicate this expectation to the team.</p>
+</div>
+<div class="ulist">
+<div class="title">Example options</div>
+<ul>
+<li>
+<p>A peer review is required on each GitHub pull request (or GitLab merge request) prior to accepting the request.</p>
+</li>
+<li>
+<p>A peer review is only required in certain (defined) situations.</p>
+</li>
+<li>
+<p>A peer review is optional.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="correct-english-spelling">3.1.2. Use correct American English spelling</h4>
+<h4 id="who-are-peer-reviewers">Who are the peer reviewers?</h4>
 <div class="paragraph">
-<p>Make sure that the correct American English spelling is used and that there are no typographical mistakes.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="no-slang-or-non-english-words">3.1.3. Do not use slang or non-English words</h4>
-<div class="paragraph">
-<p>Make sure that slang and words that are not proper American English are not used.</p>
-</div>
-<div class="paragraph">
-<p><strong>Example:</strong> repos, certs</p>
-</div>
-<div class="paragraph">
-<p><strong>Improved:</strong> repositories, certificates</p>
-</div>
-<div class="paragraph">
-<p>See <em>Writing for diverse audiences</em> in <em>The IBM Style Guide</em> for details.</p>
-</div>
-<div class="paragraph">
-<p><strong>Example:</strong> in lieu of, e.g.</p>
-</div>
-<div class="paragraph">
-<p><strong>Improved:</strong> instead of, for example or such as</p>
-</div>
-<div class="paragraph">
-<p>See <em>Latin abbreviations</em> and <em>Appendix C. Word Usage</em> in <em>The IBM Style Guide</em>.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="proper-word-usage">3.1.4. Follow proper word usage</h4>
-<div class="paragraph">
-<p>Make sure that word usage is correct.</p>
-</div>
-<div class="paragraph">
-<p><strong>Example:</strong> x86_64</p>
-</div>
-<div class="paragraph">
-<p><strong>Improved:</strong> the AMD64 and Intel 64 architectures</p>
-</div>
-<div class="paragraph">
-<p><strong>Example:</strong> hostname, username, filesystem</p>
-</div>
-<div class="paragraph">
-<p><strong>Improved:</strong> host name, user name, file system</p>
-</div>
-<div class="paragraph">
-<p>See the <a href="https://redhat-documentation.github.io/supplementary-style-guide/#glossary-terms-conventions">Glossary of Terms and Conventions</a> and <em>The IBM Style Guide</em> (<em>Appendix C. Word usage</em>) for details.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="acronyms-expanded-on-first-use">3.1.5. Expand acronyms on first use</h4>
-<div class="paragraph">
-<p>Make sure that acronyms are expanded the first they appear in a document.</p>
-</div>
-<div class="paragraph">
-<p>Use one of the bots when unsure:</p>
+<p>Determine who is expected to peer review. A manager, DPM, or CS should communicate this expectation to the team.</p>
 </div>
 <div class="ulist">
+<div class="title">Example options</div>
 <ul>
 <li>
-<p>The <a href="https://gitlab.cee.redhat.com/ccs-tools/acrobot">Acrobot IRC bot</a> - deployed on #docs, #ecsbrno</p>
+<p>Individuals can volunteer to be peer reviewers.</p>
 </li>
 <li>
-<p><a href="https://github.com/m-czernek/acrobot">Acrobot for gchat</a> - deployed in various docs-related rooms, such as <code>RHEL Docs</code></p>
+<p>Everyone on the team is expected to be available to review at any time.</p>
+</li>
+<li>
+<p>Everyone is expected to participate in peer reviews, and reviewers take turns being available.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>For Red Hat acronyms, see also the <a href="https://redhat-documentation.github.io/supplementary-style-guide/#glossary-terms-conventions">Red Hat Supplementary Style Guide</a>.</p>
 </div>
+<div class="sect3">
+<h4 id="writer-request-review">How does a writer request a peer review?</h4>
 <div class="paragraph">
-<p>See <em>The IBM Style Guide</em> (<em>Abbreviations</em>) for more information.</p>
+<p>Determine how writers request a peer review.</p>
+</div>
+<div class="ulist">
+<div class="title">Example options</div>
+<ul>
+<li>
+<p>Add the request details to a tracking spreadsheet.</p>
+</li>
+<li>
+<p>Ping a reviewer in a Google Chat or Slack channel.</p>
+</li>
+<li>
+<p>Request a review through email.</p>
+</li>
+<li>
+<p>Use GitHub/GitLab labels to mark when content is ready for review.</p>
+</li>
+<li>
+<p>Open a Jira or Bugzilla with the request.</p>
+</li>
+<li>
+<p>Ping a reviewer in the original documentation ticket.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="named-entities-qualified-on-first-use">3.1.6. Qualify named entities on first use</h4>
+<h4 id="peer-reviewer-assigned">How is the peer reviewer assigned?</h4>
 <div class="paragraph">
-<p>Establish the type of named entities on first use.</p>
+<p>Determine how peer reviewers are assigned to review content. Some methods might work better if the reviewers are on the same product team. Other methods might work better for cross-product reviews. Establish a method that suits the structure and dynamic of the group of writers and reviewers that the process targets.</p>
 </div>
 <div class="paragraph">
-<p><strong>Example:</strong> Previously, <code>sosreport</code> generated warning messages about gfs2 on systems that did not use gfs2.</p>
+<p>Before a writer requests a peer review, the writer must ensure that the target peer review audience can access the peer review tracking mechanism and the content that requires a peer review. Otherwise, a peer reviewer cannot strictly follow the established peer review process for a product.</p>
 </div>
-<div class="paragraph">
-<p><strong>Improved:</strong> Previously, the <code>sosreport</code> <em>utility</em> generated warning messages about gfs2 <em>components</em> on systems that did not use the gfs2 <em>file system</em>.</p>
-</div>
-<div class="paragraph">
-<p>See <em>The IBM Style Guide</em> (<em>Keywords</em>) for details.</p>
+<div class="ulist">
+<div class="title">Example options</div>
+<ul>
+<li>
+<p>Reviewers check a tracking spreadsheet and assign themselves.</p>
+</li>
+<li>
+<p>Peer reviewers are pinged with each request and assign themselves.</p>
+</li>
+<li>
+<p>Reviewers regularly check a GitHub pull request or a GitLab merge request queue and assign themselves.</p>
+</li>
+<li>
+<p>A writer contacts the peer reviewer.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="avoid-phrasal-verbs">3.1.7. Avoid phrasal verbs</h4>
+<h4 id="level-scope-review">What is the level or scope of the peer review?</h4>
 <div class="paragraph">
-<p><strong>Example:</strong> Find out the IP address for your system.</p>
-</div>
-<div class="paragraph">
-<p><strong>Improved:</strong> Determine the IP address for your system.</p>
-</div>
-<div class="paragraph">
-<p>See <em>The IBM Style Guide</em> (<em>Verbs</em>) for details.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="avoid-verbs-such-as-should-or-may">3.1.8. Avoid verbs such as should, or may</h4>
-<div class="paragraph">
-<p><strong>Example:</strong> You should not run the <code>rm -rf /</code> command as the root user.</p>
-</div>
-<div class="paragraph">
-<p><strong>Improved:</strong> Do not run the <code>rm -rf /</code> command as the root user.</p>
-</div>
-<div class="paragraph">
-<p><strong>Example:</strong> You may delete the log file.</p>
-</div>
-<div class="paragraph">
-<p><strong>Improved:</strong> You can delete the log file.</p>
-</div>
-<div class="paragraph">
-<p>See the <em>may</em>, <em>should</em>, and <em>must</em> entries in <em>The IBM Style Guide</em>.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="do-not-use-contractions">3.1.9. Do not use contractions</h4>
-<div class="paragraph">
-<p><strong>Example:</strong> don’t, can’t, it’s, would’ve</p>
-</div>
-<div class="paragraph">
-<p><strong>Improved:</strong> do not, cannot, it is, would have</p>
-</div>
-<div class="paragraph">
-<p>See <em>The IBM Style Guide</em> (<em>Contractions</em>) for details.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="second-level-issues">3.2. Second-level issues - stylistic issues</h3>
-<div class="paragraph">
-<p>Rules are specific but might be inapplicable in certain cases. Violations might require reviewer’s judgment, and the fix is not obvious.</p>
-</div>
-<div class="sect3">
-<h4 id="no-unnecessary-passive-voice">3.2.1. Ensure that unnecessary passive voice is not used</h4>
-<div class="paragraph">
-<p>See <a href="https://docs.engineering.redhat.com/display/CCSENABLE/Passive+voice">Passive voice</a> or <em>The IBM Style Guide</em> (<em>Voice</em>) for details.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="no-unnecessary-future-tense">3.2.2. Ensure that unnecessary future tense is not used</h4>
-<div class="paragraph">
-<p>See <a href="https://docs.engineering.redhat.com/display/CCSENABLE/Future+tense">Future tense</a> or <em>The IBM Style Guide</em> (<em>Tense</em>) for details.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="sentences-are-not-too-long">3.2.3. Ensure that sentences are not too long</h4>
-<div class="paragraph">
-<p>See <a href="https://source.redhat.com/groups/public/minimalism-quality-initiative/minimalism_in_red_hat_documentation_wiki/defining_minimalism">Defining Minimalism</a> for details.</p>
-</div>
-<div class="paragraph">
-<p>You can use a readability test, such as Flesch, Flesch-Kincaid, or Fog. See <a href="https://source.redhat.com/personal_blogs/flesch_kincaid_readability_and_your_documents_this_is_the_number_that_matters">Flesch-Kincaid, Readability, and your documents: this is the number that matters!</a> for tips and resources. For examples of content edited to improve its readability scores, see <a href="https://source.redhat.com/groups/public/ccs/ccs_wiki/using_readability_scores_to_improve_content">Using Readability Scores to Improve Content</a>.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="effective-titles">3.2.4. Ensure that effective titles are used</h4>
-<div class="paragraph">
-<p><strong>Example:</strong> Vault</p>
-</div>
-<div class="paragraph">
-<p><strong>Improved:</strong> Storing Authentication Secrets by Using Vault</p>
-</div>
-<div class="paragraph">
-<p><strong>Example:</strong> Integrated DNS in Identity Management</p>
-</div>
-<div class="paragraph">
-<p><strong>Improved:</strong> Determining Whether Integrated DNS Is Appropriate for My Use Case</p>
-</div>
-<div class="paragraph">
-<p>See <a href="https://source.redhat.com/groups/public/minimalism-quality-initiative/minimalism_in_red_hat_documentation_wiki/defining_minimalism">Defining Minimalism</a> for details.</p>
+<p>Determine the level or scope of the peer review request so the writer and reviewer have the same expectations.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1035,1395 +639,337 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Want to learn more? See the <a href="https://learning.redhat.com/enrol/index.php?id=978">Write Better Titles and Headings</a> learning module.</p>
+<p>The writer is responsible for informing the peer reviewer of any essential information related to the content.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-</div>
-<div class="sect3">
-<h4 id="as-few-words-as-possible">3.2.5. Use as few words as possible</h4>
-<div class="paragraph">
-<p><strong>Example:</strong> … compares the differences between two images.</p>
-</div>
-<div class="paragraph">
-<p><strong>Improved:</strong> … compares two images.</p>
-</div>
-<div class="paragraph">
-<p>See <a href="https://source.redhat.com/groups/public/minimalism-quality-initiative/minimalism_in_red_hat_documentation_wiki/defining_minimalism">Defining Minimalism</a> for details.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="third-level-issues">3.3. Third-level issues - content issues</h3>
-<div class="paragraph">
-<p>This section covers guidelines for good technical writing and style. They mostly apply to the level of sentences and paragraphs and can be slightly subjective. Understanding of the subject matter might be beneficial for the reviewer.</p>
-</div>
-<div class="sect3">
-<h4 id="no-ambiguity">3.3.1. Ensure that there is no ambiguity</h4>
-<div class="paragraph">
-<p><strong>Example:</strong> The <code>/etc/httpd/conf.d/</code> directory contains a number of files. As Red Hat utilizes a single overcloud full image for all the nodes, it includes these files on all the nodes.</p>
-</div>
-<div class="paragraph">
-<p><strong>Problem:</strong> What does “it” in the second sentence stands for?</p>
-</div>
-<div class="paragraph">
-<p><strong>Improved:</strong> The <code>/etc/httpd/conf.d/</code> directory contains a number of files. As Red Hat utilizes a single overcloud full image for all the nodes, the installation includes these files on all the nodes.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="no-sentences-with-low-information-value">3.3.2. Ensure that there are no sentences with low information value</h4>
-<div class="paragraph">
-<p><strong>Example:</strong></p>
-</div>
-<div class="paragraph">
-<p>Enter this command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>$ mkdir /tmp/dir</pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Problem:</strong> The users might not know what the command does.</p>
-</div>
-<div class="paragraph">
-<p><strong>Improved:</strong></p>
-</div>
-<div class="paragraph">
-<p>Create the /tmp/dir/ directory:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>$ mkdir /tmp/dir</pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="structure-paragraphs-appropriately">3.3.3. Structure paragraphs appropriately</h4>
-<div class="paragraph">
-<p>Check that the following guidelines are followed:</p>
-</div>
-<div id="one-idea-per-paragraph" class="ulist">
+<div class="ulist">
+<div class="title">Example options</div>
 <ul>
 <li>
-<p>Ensure that each paragraph contains only one idea.</p>
-<div class="exampleblock">
-<div class="title">Example 1. One idea per paragraph</div>
-<div class="content">
-<div class="paragraph">
-<p><strong>Original:</strong></p>
-</div>
-<div class="paragraph">
-<p>By default, Kerberos only stores one ticket per logged-in user in the credential cache. Whenever a user runs kinit, Kerberos overwrites the currently stored ticket with the new ticket. To obtain and store another TGT for a user, set a different credential cache, which ensures the contents of the previous cache are not overwritten.</p>
-</div>
-<div class="paragraph">
-<p><strong>Problem:</strong></p>
-</div>
-<div class="paragraph">
-<p>This paragraph describes the default behavior and the non-default one (= two ideas), and the distinction might not be clear at first sight.</p>
-</div>
-<div class="paragraph">
-<p><strong>Improved:</strong></p>
-</div>
-<div class="paragraph">
-<p>By default, Kerberos stores only one ticket per logged-in user in the credential cache. Consequentially, when a user runs kinit, Kerberos overwrites the ticket currently stored in the credential cache with the new ticket.</p>
-</div>
-<div class="paragraph">
-<p>To obtain and store another TGT for a user, specify a different credential cache. This ensures that the contents of the previous cache are not overwritten.</p>
-</div>
-</div>
-</div>
+<p>Perform a basic typographic and link check.</p>
+</li>
+<li>
+<p>Perform a full review of the content that includes checks on typographic errors and grammar, content placement or flow, structure, style guide compliance, and so on.</p>
 </li>
 </ul>
 </div>
-<div id="sequence-of-information-is-logical" class="ulist">
-<ul>
-<li>
-<p>Ensure that the sequence of information is logical.</p>
-<div class="exampleblock">
-<div class="title">Example 2. Logical information flow</div>
-<div class="content">
+</div>
+<div class="sect3">
+<h4 id="checklist-for-reviewer">Is there a checklist for the peer reviewer to follow?</h4>
 <div class="paragraph">
-<p><strong>Original:</strong></p>
+<p>Determine what checklists and other resources the reviewer should follow.</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
 <div class="paragraph">
-<p><em>Stage users</em> are not allowed to authenticate. This is an initial state.</p>
+<p>The writer is responsible for informing the peer reviewer of any essential information related to the content.</p>
 </div>
-<div class="paragraph">
-<p><em>Active users</em> are allowed to authenticate. All required user account properties must be set in this state.</p>
-</div>
-<div class="paragraph">
-<p><em>Preserved users</em> are considered inactive and cannot authenticate to Identity Management.</p>
-</div>
-<div class="paragraph">
-<p><strong>Problem:</strong></p>
-</div>
-<div class="paragraph">
-<p>Preserved users have not yet been explained, so from this description, it might seem that preserved users are the same as stage users.</p>
-</div>
-<div class="paragraph">
-<p><strong>Improved:</strong></p>
-</div>
-<div class="paragraph">
-<p><em>Preserved users</em> are former active users. Preserved users are inactive and cannot authenticate to IdM.</p>
-</div>
-</div>
-</div>
-</li>
-</ul>
-</div>
-<div id="information-has-an-appropriate-structure" class="ulist">
-<ul>
-<li>
-<p>Ensure that the information is structured appropriately.</p>
-<div class="exampleblock">
-<div class="title">Example 3. Information structure</div>
-<div class="content">
-<div class="paragraph">
-<p><strong>Original:</strong></p>
-</div>
-<div class="paragraph">
-<p>Three types of machines exist in the IdM domain. Servers manage all of the services used by domain members. Replicas are copies of servers. Once a replica is installed, it is functionally identical to a server. Clients receive certificates and tickets issued by the servers, and use other centralized services for authentication and authorization.</p>
-</div>
-<div class="paragraph">
-<p><strong>Improved, using a list and highlighting:</strong></p>
-</div>
-<div class="paragraph">
-<p>Three types of machines exist in the Identity Management domain:</p>
+</td>
+</tr>
+</table>
 </div>
 <div class="ulist">
+<div class="title">Example options</div>
 <ul>
 <li>
-<p><em>Servers</em> manage all of the services used by domain members.</p>
+<p>Follow the CCS peer review checklist.</p>
 </li>
 <li>
-<p><em>Replicas</em> are copies of servers. Once a replica is installed, it is functionally identical to a server.</p>
-</li>
-<li>
-<p><em>Clients</em> receive certificates and tickets issued by the servers and use other centralized services for authentication and authorization.</p>
+<p>Follow the CCS peer review checklist and a team-specific checklist.</p>
 </li>
 </ul>
 </div>
 </div>
-</div>
-</li>
-</ul>
-</div>
-<div id="use-admonitions-only-when-necessary" class="ulist">
-<ul>
-<li>
-<p>Use admonitions only when necessary</p>
-<div class="paragraph">
-<p>For details, see <em>Notes and notices</em> in <em>The IBM Style Guide</em>.</p>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="fourth-level-issues">3.4. Fourth-level issues</h3>
-<div class="paragraph">
-<p>These high-level considerations help determine whether or not the document fulfills its purpose. These issues require understanding the subject matter. Some rules are highly subjective and potentially labor-intensive to assess and implement.</p>
-</div>
 <div class="sect3">
-<h4 id="meet-modular-guidelines">3.4.1. Ensure the documentation structure meets the modular guidelines</h4>
+<h4 id="platform-tools-used">What platform and tools are used to perform the review and give feedback?</h4>
 <div class="paragraph">
-<p>Make sure that the overall structure of the documentation meets the modular documentation guidelines.</p>
-</div>
-<div class="paragraph">
-<p>It is important to make sure that the documentation addresses a single user story.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="sections-include-the-appropriate-amount-of-information">3.4.2. Ensure that sections include the appropriate amount of information</h4>
-<div id="provide-all-the-required-information" class="dlist">
-<dl>
-<dt class="hdlist1">Provide all the required information</dt>
-<dd>
-<p>Alternatively, links to other sections, man pages, or other resources with the required information are provided. See also
-<a href="#example-provide-all-the-required-information">the "Provide all the required information" example</a></p>
-</dd>
-</dl>
-</div>
-<div class="sect4">
-<h5 id="do-not-include-any-unnecessary-information">Do not include any unnecessary information</h5>
-<div class="paragraph">
-<p><strong>Example:</strong> For the full list of the options accepted by the ipa-server-install utility, see Table 3.1, “ipa-server-install Options”.</p>
-</div>
-<div class="paragraph">
-<p><strong>Problem:</strong> Documenting only selected commonly used options (with examples) is more useful than providing a list that the writer is obliged to update all the time.</p>
-</div>
-<div class="paragraph">
-<p><strong>Improved:</strong> See the ipa-server-install(1) man page for a complete list of command options.</p>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="use-screenshots-and-other-visuals-where-required">3.4.3. Use screenshots and other visuals (only) where required</h4>
-<div class="paragraph">
-<p>Keep in mind that screenshots may also require frequent updates, increase your repo size considerably, and represent an issue for accessibility.</p>
-</div>
-<div class="paragraph">
-<p>For tips, see the <a href="https://source.redhat.com/groups/public/ccs/ccs_wiki/documentation_screenshot_guidelines">Documentation screenshot guidelines</a>.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="provide-information-to-a-new-reader-at-the-right-pace">3.4.4. Provide information to a new reader at the right pace</h4>
-<div class="paragraph">
-<p><a href="#example-provide-information-to-a-new-reader-at-the-right-pace">The "Provide information to a new reader at the right pace" example</a></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="the-document-is-appropriate-for-the-intended-audience">3.4.5. Ensure that the document is appropriate for the intended audience</h4>
-<div class="sect4">
-<h5 id="tasks-reflect-the-intended-goal-of-the-user">Ensure that tasks reflect the intended goal of the user</h5>
-<div class="paragraph">
-<p><a href="#example-tasks-reflect-the-intended-goal-of-the-user">The "Tasks reflect the intended goal of the user" example</a></p>
-</div>
-<div class="paragraph">
-<p>See <a href="https://source.redhat.com/groups/public/minimalism-quality-initiative/minimalism_in_red_hat_documentation_wiki/defining_minimalism">Defining Minimalism</a> for details.</p>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="information-is-in-the-best-possible-location">3.4.6. Ensure that information is in the best possible location</h4>
-<div class="paragraph">
-<p><a href="#example-information-is-in-the-best-possible-location">The "Information is in the best possible location" example</a></p>
-</div>
-<div class="paragraph">
-<p>See <a href="https://source.redhat.com/groups/public/minimalism-quality-initiative/minimalism_in_red_hat_documentation_wiki/defining_minimalism">Defining Minimalism</a> for details.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="include-troubleshooting-and-error-recognition-steps-where-appropriate">3.4.7. Include troubleshooting and error recognition steps where appropriate</h4>
-<div class="paragraph">
-<p><a href="#example-include-troubleshooting-and-error-recognition-steps-where-appropriate">The "Include troubleshooting and error recognition steps where appropriate" example</a></p>
-</div>
-<div class="paragraph">
-<p>See <a href="https://source.redhat.com/groups/public/minimalism-quality-initiative/minimalism_in_red_hat_documentation_wiki/defining_minimalism">Defining Minimalism</a> for details.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="apply-templates-if-the-team-uses-them">3.4.8. Apply templates if the team uses them</h4>
-<div class="paragraph">
-<p>The <a href="https://source.redhat.com/groups/public/flexible-customer-content">Flexible Customer Content</a> project is responsible for creating templates. For details see:</p>
+<p>Determine how to share content and how to provide feedback.</p>
 </div>
 <div class="ulist">
+<div class="title">Example options</div>
 <ul>
 <li>
-<p><a href="https://github.com/redhat-documentation/modular-docs/tree/master/modular-docs-manual/files">Modular documentation templates</a></p>
+<p>Draft content in a Google Doc and use the document for comments and suggestions.</p>
 </li>
 <li>
-<p><a href="https://redhat-documentation.github.io/modular-docs/#appendix-examples">Module and assembly examples</a></p>
+<p>Share a GitHub/GitLab pull request; reviewers can comment directly inline for each change.</p>
+</li>
+<li>
+<p>Provide small snippets of content by email, instant messaging, or a ticket.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For more information, see <a href="#pros-cons-peer-review-platforms">Pros and cons of the different peer review platforms</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="expected-turnaround-time">What is the expected turnaround time?</h4>
+<div class="paragraph">
+<p>Determine the expected turnaround time for completing a peer review. Writers should communicate if there is any urgency or deadlines for the review.</p>
+</div>
+<div class="ulist">
+<div class="title">Example options</div>
+<ul>
+<li>
+<p>Reviewers are expected to check the GitHub/GitLab queue daily or twice daily.</p>
+</li>
+<li>
+<p>Peer reviewers are expected to respond to a Slack or Google Chat ping within a few hours.</p>
+</li>
+<li>
+<p>Reviewers are expected to check the tracking spreadsheet daily.</p>
+</li>
+<li>
+<p>Writers are expected to communicate the requested turnaround time after requesting the peer review.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="the-content-is-accessible">3.4.9. The content is accessible</h4>
+<h4 id="urgent-peer-reviews-escalated">How do urgent peer reviews get escalated?</h4>
 <div class="paragraph">
-<p>Wherever possible, the documentation should not be difficult to parse for people with various sensory or cognitive impairments. To ensure maximum viable degree of accessibility for your documentation, see our accessibility checklists:</p>
+<p>Determine how an unassigned peer review request should be escalated if it could affect product release schedules.</p>
 </div>
 <div class="ulist">
+<div class="title">Example options</div>
 <ul>
 <li>
-<p><a href="https://docs.google.com/document/d/1ZYd5lxl4wHqqulCU_QsMZTPu02OVdraYL1enPq48_GA/edit">Concise version</a></p>
+<p>Inform a manager, DPM, or CS of the unassigned time-critical peer review, so that they can escalate the peer review request or negotiate a new timeline for reviewing the content.</p>
 </li>
 <li>
-<p><a href="https://docs.google.com/document/d/1SXhLknoE4gjyqumlCEI6H_IOekcjjPyjiNjccysyzcM/edit">Comprehensive version with examples</a></p>
+<p>Use the peer review request channel that you established to request an urgent peer review. Ensure you detail the tight timelines in the channel, and assist a volunteer peer reviewer in a way that they can review the content with minimal distractions.</p>
 </li>
 </ul>
 </div>
 </div>
-</div>
-<div class="sect2">
-<h3 id="other-things-to-review">3.5. Other things to review</h3>
 <div class="sect3">
-<h4 id="markup">3.5.1. Review markup</h4>
+<h4 id="peer-review-feedback-incorporated">How is peer review feedback incorporated?</h4>
 <div class="paragraph">
-<p>Markup guidelines differ from team to team, and we do not have common guidelines that all teams follow. If you know a particular team’s guidelines, feel free to review the markup too, or make a suggestion if you are unsure.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="real-world-peer-reviews">3.6. Real-world peer reviews</h3>
-<div class="paragraph">
-<p>Need more examples or complete peer reviews? See <a href="https://drive.google.com/drive/folders/0B6QoLrDouZrFYjY3N2RkZnpnWW8">real-world peer reviews</a>.</p>
+<p>Determine the expectations for addressing or incorporating feedback. Expectations become important if the writer and peer reviewer disagree on a review item.</p>
 </div>
 <div class="paragraph">
-<p>Also, check <a href="https://source.redhat.com/groups/public/ccs/ccs_blog/how_to_edit_for_quality_presentation_at_na_ccs_onsite">How to edit for quality</a>.</p>
+<p>Incorporate an escalation process into your peer review process, such as requesting manager, DPM, or CS input or communicating in a guidelines group. This way, any disagreement between a writer and peer reviewer can be resolved.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="additional-resources">3.7. Additional resources</h3>
 <div class="ulist">
+<div class="title">Example options</div>
 <ul>
 <li>
-<p><a href="https://redhat-documentation.github.io/supplementary-style-guide/">Red Hat supplementary style guide for product documentation</a></p>
+<p>Incorporate feedback at the writer&#8217;s discretion.</p>
 </li>
 <li>
-<p><a href="https://www.amazon.com/Developing-Quality-Technical-Information-Information/dp/0131477498">Developing Quality Technical Information: A Handbook for Writers and Editors</a></p>
+<p>Establish a communication channel for informing the peer reviewer of the next steps.</p>
 </li>
 <li>
-<p><a href="https://www.amazon.com/Style-Lessons-Clarity-Grace-12th/dp/0134080416">Style: Lessons in Clarity and Grace</a></p>
+<p>Address peer review feedback and request the peer reviewer to perform a review of the revised content.</p>
 </li>
 </ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="finalizing-team-peer-review-process">Finalizing your team&#8217;s peer review process</h3>
+<div class="paragraph">
+<p>Both writers and peer reviewers must agree on the expectations for the peer review process.</p>
+</div>
+<div class="paragraph">
+<p>Complete the following steps to finalize the peer review process:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Draft a proposal for the peer review process.</p>
+</li>
+<li>
+<p>Share the proposal with the team and allow time for the team to provide feedback.</p>
+</li>
+<li>
+<p>Test the process to be sure that it works well for your team.</p>
+</li>
+<li>
+<p>Document the final process wherever your team stores its resources.</p>
+</li>
+<li>
+<p>Communicate the final process to the team and to any other contributors or stakeholders.</p>
+</li>
+</ol>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="tips-and-tricks">4. Peer review tips and tricks</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="general-recommendations">4.1. General recommendations for peer review</h3>
-<div class="paragraph">
-<p>When requesting feedback, make it as easy as possible for the reviewer to help you efficiently:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Provide links to the text you need reviewed, ideally rendered in a preview tool like:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="http://file.emea.redhat.com/~jhradile/git-workflow/#getting-reviews-gitlab-workflow">CI bots in GitLab</a></p>
-</li>
-<li>
-<p><a href="https://pantheon.cee.redhat.com/#/home">Pantheon</a></p>
-</li>
-<li>
-<p>The <a href="https://errata.devel.redhat.com/errata">Errata Tool</a>.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Link to the ticket related to the content to be reviewed (if there is one) so your reviewer understands the context of any changes.</p>
-</li>
-<li>
-<p>If you need a review of a specific Git commit, send the reviewer a link to the commit in <a href="https://gitlab.cee.redhat.com">GitLab</a>, so they can specifically see what changes were made.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>When providing feedback:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Put your notes in a sensible order, and make it obvious what part of the document you are talking about, especially when reviewing a more extensive portion of content.</p>
-</li>
-<li>
-<p>Add your own suggestions for improvement for the problematic parts (rather than just for example “this doesn’t make sense”).</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="peer-review-methods">4.2. Peer review methods</h3>
-<div class="sect3">
-<h4 id="_google_docs">4.2.1. Google docs</h4>
-<div class="paragraph">
-<div class="title">Usage</div>
-<p>Widely adopted and easy-to-use, Google Docs is a versatile tool that can serve for various formats of peer review.</p>
-</div>
-<div class="ulist">
-<div class="title">Specifics</div>
-<ul>
-<li>
-<p>Asking for feedback:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>After creating or copying your content in a Google Doc, make sure you allow other Red Hatters to comment in it (“Share” &#8594; “Anyone at Red Hat with the link can comment”), then send the link (also under “Share”) to the reviewer.</p>
-<div class="imageblock thumb">
-<div class="content">
-<img src="Images/gdoc_share_button.png" alt="gdoc share button">
-</div>
-</div>
-<div class="imageblock thumb">
-<div class="content">
-<img src="Images/gdoc_share_screen.png" alt="gdoc share screen">
-</div>
-</div>
-</li>
-<li>
-<p>Alternatively, you can share the document only with select people by adding their names or mail addresses in “Share” &#8594; “People”.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Providing feedback:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Unless specifically asked to do otherwise, use the Comment feature (Ctrl-Alt-m) to provide your observations. You can also suggest specific content changes by using Suggesting mode.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="imageblock thumb">
-<div class="content">
-<img src="Images/gdoc_suggest.png" alt="gdoc suggest">
-</div>
-</div>
-<div class="ulist">
-<div class="title">Pros</div>
-<ul>
-<li>
-<p>Can be open to multiple people</p>
-</li>
-<li>
-<p>Easy to link to and add additional reviewers</p>
-</li>
-<li>
-<p>Convenient for commenting on specific chunks of text</p>
-</li>
-<li>
-<p>The same document can be used for both SME and peer review</p>
-</li>
-</ul>
-</div>
-<div class="ulist">
-<div class="title">Cons</div>
-<ul>
-<li>
-<p>Does not preserve markup</p>
-</li>
-<li>
-<p>Copy-pasting large chunks of content from HTML  or PDF into Google Docs can be unreliable</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<div class="title">Ideal for</div>
-<p>Any type of content where the content is more important than the markup, such as initial guide drafts, errata, release notes, or KBase articles.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_bugzilla">4.2.2. Bugzilla</h4>
-<div class="paragraph">
-<div class="title">Usage</div>
-<p>As the main bug-tracking tool in Red Hat, Bugzilla’s bug tickets, commonly referred to as “bugzillas” or “BZs”, allow Red Hatters to add comments and operate with flags, which can also be used for providing peer reviews.</p>
-</div>
-<div class="ulist">
-<div class="title">Specifics</div>
-<ul>
-<li>
-<p>Asking for feedback:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>To ask for a peer review in Bugzilla, add a needinfo flag in the particular BZ by checking “Need additional info from” and filling in the mail address of the reviewer, and provide a link to the document preview in a Comment.</p>
-<div class="imageblock thumb">
-<div class="content">
-<img src="Images/BZ_needinfo.png" alt="BZ needinfo">
-</div>
-</div>
-</li>
-<li>
-<p>Optionally, use the Docs Contact field to mark the reviewer of documentation BZs.</p>
-</li>
-<li>
-<p>If the BZ is public, make sure that your comments are private, or that you do not disclose any confidential info.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Providing feedback:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>If it is more extensive, write your feedback in an offline tool first to be safe, since BZ is an online interface that does not autosave your input.</p>
-</li>
-<li>
-<p>If the BZ is public, make sure that your comments are private, or that you do not disclose any confidential info.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="ulist">
-<div class="title">Pros</div>
-<ul>
-<li>
-<p>Officially tracked by default</p>
-</li>
-<li>
-<p>Your comments are sent to everybody CC’d on the BZ</p>
-</li>
-</ul>
-</div>
-<div class="ulist">
-<div class="title">Cons</div>
-<ul>
-<li>
-<p>Limited space</p>
-</li>
-<li>
-<p>In case of connection problems, your feedback might get lost before you send it</p>
-</li>
-<li>
-<p>Your comments are sent to everybody CC’d on the BZ</p>
-</li>
-<li>
-<p>Impossible to edit submitted comments. If you screw something up, everyone can see it forevermore</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<div class="title">Ideal for</div>
-<p>Documentation BZs in general, especially those under a lot of scrutiny.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_jira">4.2.3. JIRA</h4>
-<div class="paragraph">
-<div class="title">Usage</div>
-<p>JIRAs allow you to add peer-reviews as a sub-task within the documentation JIRA, and hence make peer reviews compulsory. When doing a peer review via JIRA, you can track the review comments within the JIRA itself, or attach a Google doc to review lengthy pieces of content.</p>
-</div>
-<div class="ulist">
-<div class="title">Specifics</div>
-<ul>
-<li>
-<p>Asking for feedback:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Tag the intended reviewer in JIRA. If you are not sure, tag your DPM and ask him to assign further. The tagged person is notified via email about the assignment.</p>
-</li>
-<li>
-<p>Provide a link to the content to be reviewed.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Providing feedback:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>For shorter pieces of content, you may provide feedback as a JIRA comment itself.</p>
-</li>
-<li>
-<p>For lengthy content, you may discuss with the writer and review in a Google Doc if it is more convenient.</p>
-</li>
-<li>
-<p>Attach the reviewed Google Doc to the peer review JIRA sub task.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="ulist">
-<div class="title">Pros</div>
-<ul>
-<li>
-<p>Ensures peer reviews are done on every JIRA</p>
-</li>
-<li>
-<p>Multiple peers (writer, reviewer, QE, SME) can collaborate and discuss changes and confirm before any change is made.</p>
-</li>
-</ul>
-</div>
-<div class="ulist">
-<div class="title">Cons</div>
-<ul>
-<li>
-<p>Lengthy pieces of content can be tedious to discuss via comments in JIRA</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<div class="title">Ideal for</div>
-<p>Teams that use JIRA for documentation tickets and intend to enforce peer reviews for every piece of content that is added to their documentation suite.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_merge_request">4.2.4. Merge request</h4>
-<div class="paragraph">
-<div class="title">Usage</div>
-<p>Teams who have moved their content to GitLab can easily review/provide feedback directly on the source files in GitLab itself. Reviewing directly in merge requests (MRs) means there are fewer copies of content to maintain because you do not need to import content to Google docs or any other non-adoc/xml format for review purposes. Also, the reviews may be done, and hence corrections made, before merging the requests to the repo.</p>
-</div>
-<div class="ulist">
-<div class="title">Specifics</div>
-<ul>
-<li>
-<p>Asking for feedback:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>To ask for feedback on a merge request, simply tag the reviewer/s on the MR while submitting.</p>
-</li>
-<li>
-<p>You can add a description of the JIRA or Bugzilla, and any specific details you would want the reviewer to keep in mind while doing the review.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Providing feedback:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Toggle to the ‘Changes’ tab to view the topics updated in the MR. The content added is highlighted in green color; content removed is highlighted in pink.</p>
-<div class="imageblock thumb">
-<div class="content">
-<img src="Images/MR_Changes_Tab.png" alt="MR Changes Tab">
-</div>
-</div>
-</li>
-<li>
-<p>Go to the line number that you want to comment on, and click the balloon callout that appears when you move your mouse pointer at the beginning of the line. This opens a comment box in which you can enter your review comments.</p>
-<div class="imageblock thumb">
-<div class="content">
-<img src="Images/MR_Comment.png" alt="MR Comment">
-</div>
-</div>
-</li>
-<li>
-<p>Follow the same procedure for rest of the lines/topics.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="ulist">
-<div class="title">Pros</div>
-<ul>
-<li>
-<p>Commenting is easy to interpret, as you can provide comments on respective line numbers.</p>
-</li>
-<li>
-<p>Multiple people involved in the JIRA/Bugzilla (writer, SME, QE) can collaborate on the same MR.</p>
-</li>
-<li>
-<p>Feedback can be incorporated before the MR is accepted, hence one less cycle of changes to the repo.</p>
-</li>
-</ul>
-</div>
-<div class="ulist">
-<div class="title">Cons</div>
-<ul>
-<li>
-<p>Good to have familiarity with the GitLab UI</p>
-</li>
-<li>
-<p>Might be confusing for the first-time GitLab MR reviewers.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<div class="title">Ideal for</div>
-<p>Teams that have their content in GitLab and use merge requests to update their repositories.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_email">4.2.5. Email</h4>
-<div class="paragraph">
-<div class="title">Usage</div>
-<p>Possibly the simplest way of conducting peer review in CCS is simply putting your thoughts and notes down in an email and sending it to the writer.</p>
-</div>
-<div class="paragraph">
-<div class="title">Specifics</div>
-<p>None</p>
-</div>
-<div class="ulist">
-<div class="title">Pros</div>
-<ul>
-<li>
-<p>Comprehensive</p>
-</li>
-<li>
-<p>Easy for the writer to refer to later on</p>
-</li>
-<li>
-<p>Less pressure on the reviewer</p>
-</li>
-</ul>
-</div>
-<div class="ulist">
-<div class="title">Cons</div>
-<ul>
-<li>
-<p>Potentially slow and time-consuming</p>
-</li>
-<li>
-<p>Less pressure on the reviewer</p>
-</li>
-<li>
-<p>“Hidden” (only between two or a limited sum of people, and difficult to link)</p>
-</li>
-<li>
-<p>The feedback can be hard to read if not structured well</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<div class="title">Ideal for</div>
-<p>Short pieces of content that do not require higher transparency of the review process.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_irc_or_a_different_chat_system">4.2.6. IRC (or a different chat system)</h4>
-<div class="paragraph">
-<div class="title">Usage</div>
-<p>If you require a more immediate response or only have a very short piece of text to review, a messaging service such as IRC, gchat, or Slack can be the tool for the task. Chats are also a very good way to confirm that a specific person is available and willing to do a peer review for you.</p>
-</div>
-<div class="ulist">
-<div class="title">Specifics</div>
-<ul>
-<li>
-<p>Asking for feedback:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Contact the potential reviewer in a chat channel or send them a private message.</p>
-</li>
-<li>
-<p>Some Red Hatters might consider the “naked ping” (only sending “ping” for initial contact) impolite, which would lessen your chances of them agreeing to do the review. So, consider starting the conversation with a full-ish sentence.</p>
-</li>
-<li>
-<p>Make sure you have conversation logging enabled, so you can safely return to the feedback later, if need be.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Providing feedback:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>If contacted via chat, first verify with the writer in what form they would like to receive your review.</p>
-</li>
-<li>
-<p>If using a chat for reviews, organize your feedback into smaller chunks, which you send gradually, to allow the writer to implement the feedback as fast as possible.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="ulist">
-<div class="title">Pros</div>
-<ul>
-<li>
-<p>Fast</p>
-</li>
-<li>
-<p>Opportunity for immediate discussion</p>
-</li>
-<li>
-<p>Harder-to-miss for the reviewer (if they are online)</p>
-</li>
-</ul>
-</div>
-<div class="ulist">
-<div class="title">Cons</div>
-<ul>
-<li>
-<p>Limited space</p>
-</li>
-<li>
-<p>Both participants must be online</p>
-</li>
-<li>
-<p>Unless done entirely in a channel, only open to one reviewer at a time and “hidden”</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<div class="title">Ideal for</div>
-<p>Quick reviews of short pieces of documentation, such as one-line fixes or individual release notes, if they do not require review transparency.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_pair_writing">4.2.7. Pair writing</h4>
-<div class="paragraph">
-<div class="title">Usage</div>
-<p>An alternative to traditional peer review, wherein two writers collaborate on a piece of content simultaneously.</p>
-</div>
-<div class="paragraph">
-<div class="title">Specifics</div>
-<p>See <a href="https://gitlab.cee.redhat.com/msvistun/pair-writing/blob/master/know_this.adoc">Pair writing - theoretical stuff</a>.</p>
-</div>
-<div class="ulist">
-<div class="title">Pros</div>
-<ul>
-<li>
-<p>Very intense and time-efficient</p>
-</li>
-<li>
-<p>Both involved writers can pick up a lot of new skills and insights from each other</p>
-</li>
-<li>
-<p>If the writer and reviewer disagree on something, they can resolve the situation on the spot and come to the best solution together</p>
-</li>
-</ul>
-</div>
-<div class="ulist">
-<div class="title">Cons</div>
-<ul>
-<li>
-<p>Less effective if the two writers are not in the same physical location</p>
-</li>
-<li>
-<p>Some people might not be very comfortable with it</p>
-</li>
-<li>
-<p>Might require meticulous(ish) planning</p>
-</li>
-<li>
-<p>Some people do not pair easily with everyone</p>
-</li>
-</ul>
-</div>
-<div class="ulist">
-<div class="title">Ideal for</div>
-<ul>
-<li>
-<p>Feedback that is complex and difficult to explain in writing</p>
-</li>
-<li>
-<p>Situations where you want to encourage further discussion on the spot</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="miscellaneous">4.3. Miscellaneous tips</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>To see if any peer reviewer is available and willing to work with you (regardless of the review method), you can ask in one of the CCS IRC channels:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>#ecsbrno</p>
-</li>
-<li>
-<p>#docs</p>
-</li>
-<li>
-<p>#CCS-India</p>
-<div class="paragraph">
-<p>and potentially other geo-specific CCS channels.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>For potential errata peer reviewers, see the <a href="https://source.redhat.com/groups/public/ccs-onboarding-program/ccs_onboarding_wiki/internal_subject_matter_experts_for_ccs">CCS internal SMEs list</a>.</p>
-</li>
-<li>
-<p>If you are looking for a writer who works on a specific product, see the <a href="https://source.redhat.com/groups/public/ccs/ccs_wiki/ccs_product_coverage_key_contacts">CCS product coverage</a>.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_faq">4.4. FAQ</h3>
-<div class="paragraph">
-<div class="title">Who should be getting peer reviews, and who should be providing them?</div>
-<p>Newer writers are required to seek out a peer review even before submitting their work for review by the SME. Afterwards, they need to get another peer review from a different writer, to quickly gain as much insight as possible. However, even grizzled writing veterans can benefit from a fresh pair of eyes and a different reader perspective - even from somebody fairly new, who in turn also increases their documentation know-how, and gets smoothly introduced to peer reviewing.</p>
-</div>
-<div class="paragraph">
-<div class="title">Am I obligated to seek out a peer review every time I document something?</div>
-<p>Getting peer review is strongly encouraged, but not mandatory. For example, if you are racing against a deadline and there is nobody available for a quick review, or if your changes to the documentation only consist of trivial typo fixes, not getting any peer review should not be considered a blocker.</p>
-</div>
-<div class="paragraph">
-<div class="title">What if the peer reviewer tells me to make some changes that I do not agree with?</div>
-<p>It is called a <strong>peer</strong> review, so while one of the parties involved might be more experienced, it does not necessarily make them the executive authority. If you disagree with the feedback you got, a discussion of its reasoning should clear it up. If that does not do the trick, ask for a third writer’s opinion, or consult a style guide or an already vetted piece of documentation.</p>
-</div>
-<div class="paragraph">
-<div class="title">Can I be somehow penalized for not getting or providing peer reviews?</div>
-<p>Definitely not, at least not directly. If you are too busy or need to get your documentation out on a very tight schedule, it is perfectly understandable that you cannot afford peer reviews. However, by consistently avoiding peer reviews, you might be depriving yourself of an opportunity to learn a lot and improve your content (at little cost to your own time, too!) - so you are basically penalizing yourself.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="about-levels">Appendix A: About levels of issues in the peer review framework</h2>
+<h2 id="pros-cons-peer-review-platforms">Appendix A: Pros and cons of the different peer review platforms</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This document explains the purpose of using different issue levels in the <a href="#peer-review-framework">Peer review framework</a>.</p>
+<p>Review the following pros and cons for each platform to choose the right peer review method for your team.</p>
 </div>
-<h3 id="_why_is_the_framework_divided_into_levels" class="discrete">Why is the framework divided into levels?</h3>
-<div class="paragraph">
-<p>The main reason why we came up with the idea of various levels of issues was to bring some order to the chaos. Not all issues have the same weight, some of them are more complex than others and might require more time, some of them are trivial errors that can be found automatically.</p>
-</div>
-<div class="paragraph">
-<p>From our experience, we also noticed that some reviewers might not be aware of issues from the higher levels. They, for example, only search for typos but do not concentrate on the overall structure of the reviewed content.</p>
-</div>
-<div class="paragraph">
-<p>In addition, the levels can:</p>
-</div>
+<div class="sect2">
+<h3 id="github-gitlab">GitHub or GitLab</h3>
 <div class="ulist">
+<div class="title">Pros</div>
 <ul>
 <li>
-<p>Serve as guidelines for writers who want to improve their peer reviewing skills. For example, a writer who has mastered recognizing first-level and second-level issues can work on getting better at recognizing third-level issues.</p>
+<p>Provides a convenient method for commenting on specific lines of content on a GitHub pull request (PR) or GitLab merge request (MR).</p>
 </li>
 <li>
-<p>Help us measure the quality of our content. For example, a large number of first-level issues would indicate too many trivial errors that can easily be fixed, while fourth-level issues would tell us that we need to focus on more delicate issues.</p>
+<p>Includes functionality for easily adding additional reviewers.</p>
+</li>
+<li>
+<p>Includes a mechanism for multiple people, such as writers, SMEs, or QEs, involved in a Jira ticket or Bugzilla ticket to collaborate on the same PR or MR.</p>
+</li>
+<li>
+<p>Provides an easy linking functionality.</p>
+</li>
+<li>
+<p>Offers the capability for writers to incorporate feedback before the PR or MR is approved.</p>
 </li>
 </ul>
 </div>
-<h3 id="_what_do_the_levels_mean_for_me_as_a_reviewer" class="discrete">What do the levels mean for me as a reviewer?</h3>
-<div class="paragraph">
-<p>The levels can serve you as a guide on what type of issue you can concentrate while doing a peer review. The levels do not determine in what order you should follow them. You can start from whatever level you want.</p>
-</div>
-<div class="paragraph">
-<p>Naturally, not all levels always apply to all reviewed contents. For instance, there is a difference between reviewing an erratum and a whole new chapter about a super cool new feature.</p>
-</div>
-<div class="paragraph">
-<p>You can also:</p>
-</div>
 <div class="ulist">
+<div class="title">Cons</div>
 <ul>
 <li>
-<p>Categorize your findings based on the levels.</p>
+<p>Users must have familiarity with the GitHub or GitLab UI.</p>
 </li>
 <li>
-<p>Use the levels as a personal reference for what action to take on an issue. For example, in the RHCI team, reviewers fix trivial issues (level 1) by themselves.</p>
-</li>
-<li>
-<p>Use them to estimate how big an effort it will take to do a peer review. You can for example tell your colleague: “Right now, I have only time to concentrate on issues level 1 and 2. I will be able to do the rest (level 3 and 4) next week.”</p>
+<p>Users must have a login to comment on a PR or MR.</p>
 </li>
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_longer_examples_of_peer_review_framework_issues">Appendix B: Longer examples of peer review framework issues</h2>
-<div class="sectionbody">
 <div class="sect2">
-<h3 id="example-provide-all-the-required-information">B.1. The "Provide all the required information" example</h3>
-<div class="paragraph">
-<p><strong>Example:</strong></p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure 13.1. Creating a snapper configuration file</div>
-<ol class="arabic">
-<li>
-<p>Create or choose either:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>a thinly-provisioned logical volume with a Red Hat supported file system on top of it, or</p>
-</li>
-<li>
-<p>a Btrfs subvolume.</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Mount the file system.</p>
-</li>
-<li>
-<p>Create the configuration file that defines this volume.</p>
-<div class="paragraph">
-<p><em>&#8230;&#8203;specific steps how to do it&#8230;&#8203;</em></p>
-</div>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><strong>Problem:</strong> The user might not know how to create or mount the volumes as instructed in the step 1 and 2. Add links to additional resources.</p>
-</div>
-<div class="paragraph">
-<p><strong>Improved:</strong></p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure 13.1. Creating a snapper configuration file</div>
-<ol class="arabic">
-<li>
-<p>Create or choose either:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>a thinly-provisioned logical volume with a Red Hat supported file system on top of it, or</p>
-</li>
-<li>
-<p>a Btrfs subvolume.</p>
-<div class="paragraph">
-<p>For details, see the File Systems part of this document.</p>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Mount the file system. For details see the mount(8) manual page.</p>
-</li>
-<li>
-<p>Create the configuration file that defines this volume.</p>
-<div class="paragraph">
-<p><em>&#8230;&#8203;specific steps how to do it&#8230;&#8203;</em></p>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="example-provide-information-to-a-new-reader-at-the-right-pace">B.2. The "Provide information to a new reader at the right pace" example</h3>
-<div class="paragraph">
-<p><strong>Example:</strong></p>
-</div>
-<div class="paragraph">
-<div class="title">18.1. Managing certificates with the integrated IdM CA</div>
-<p>The integrated IdM certificate authority (CA) can create, revoke, and issue certificates. The administrator can add the certificates to user, host, or service entries. An entry can have multiple certificates assigned.</p>
-</div>
-<div class="paragraph">
-<p>If you need to invalidate the certificate before its expiration date, you can revoke it. You must specify a reason for the revocation.</p>
-</div>
-<div class="paragraph">
-<p>A revoked certificate is invalid and cannot be used for authentication. Only certificates revoked because of reason 6: Certificate Hold can be restored again.</p>
-</div>
-<div class="paragraph">
-<p><strong>Problem:</strong> Most of the information is relevant only to a section about revoking certificates not to the introductory section. Users do not need such information at the beginning.</p>
-</div>
-<div class="paragraph">
-<p><strong>Improved:</strong></p>
-</div>
-<div class="paragraph">
-<div class="title">18.1. Managing certificates with the integrated IdM CA</div>
-<p>The integrated IdM certificate authority (CA) can create, revoke, and issue certificates.</p>
-</div>
-<div class="paragraph">
-<div class="title">18.1.1. Revoking certificates with the integrated IdM CA</div>
-<p>If you need to invalidate the certificate before its expiration date, you can revoke it. To revoke a certificate using:</p>
-</div>
+<h3 id="google-docs">Google Docs</h3>
 <div class="ulist">
+<div class="title">Pros</div>
 <ul>
 <li>
-<p>the IdM web UI, see <a href="http://jenkinscat.gsslab.pnq.redhat.com:8080/job/doc-Red_Hat_Enterprise_Linux-7-Linux_Domain_Identity_Authentication_and_Policy_Guide%20%28html-single%29/lastStableBuild/artifact/tmp/en-US/html-single/index.html#certificate-idm-revoke-ui">the section called “Web UI: Revoking Certificates”</a></p>
+<p>Includes a convenient method for commenting on specific text.</p>
 </li>
 <li>
-<p>the command line, <a href="http://jenkinscat.gsslab.pnq.redhat.com:8080/job/doc-Red_Hat_Enterprise_Linux-7-Linux_Domain_Identity_Authentication_and_Policy_Guide%20%28html-single%29/lastStableBuild/artifact/tmp/en-US/html-single/index.html#certificate-idm-revoke-cli">see the section called “Command Line: Revoking Certificates”</a></p>
+<p>Includes functionality for easily adding additional reviewers.</p>
+</li>
+<li>
+<p>Includes a mechanism for multiple people, such as writers, SMEs, or QEs, involved in a Jira ticket or Bugzilla ticket to collaborate on the same Google Doc.</p>
+</li>
+<li>
+<p>Provides an easy linking functionality.</p>
+</li>
+<li>
+<p>Allows you to copy and paste AsciiDoc content into a Google Doc.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>A revoked certificate is invalid and cannot be used for authentication. All revocations are permanent, except for reason 6: Certificate Hold.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="example-tasks-reflect-the-intended-goal-of-the-user">B.3. The "Tasks reflect the intended goal of the user" example</h3>
-<div class="paragraph">
-<p><strong>Example:</strong></p>
-</div>
-<div class="paragraph">
-<p>The 389 Directory Server and Dogtag Certificate System instances share a single directory database for data. Replication agreements are set up for different suffixes within that directory. The directory and certificate replication agreements are managed through different tools and are created and removed independently. If a certificate replication agreement is removed, but a data replication agreement is not, there can be problems with using certificates with some directory entries.</p>
-</div>
-<div class="paragraph">
-<p>For example, both data and certificate replication agreements exist between Server A and Server B. If the certificate agreement is removed, both Server A and Server B still have certificate authorities and are still issuing certificates, but that information is no longer being replicated. If Server A issues a certificate to Host 1, and then someone attempts to use Server B to manage Host 1, Server B returns an error that it cannot verify Host 1&#8217;s certificate serial number.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>Certificate operation cannot be completed: EXCEPTION (Certificate serial number 0x2d not found)</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This is because Server B has information about Host 1 in its data directory, but it does not have the host certificate in its certificate directory.
-To work around this, enable replication between the two IdM servers.</p>
-</div>
-<div class="paragraph">
-<p><strong>Problem:</strong></p>
-</div>
-<div class="paragraph">
-<p>This is a troubleshooting content so we can assume that users want to:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Recognize if their problem is matching the documented problem.</p>
-</li>
-<li>
-<p>Fix the problem.</p>
-</li>
-<li>
-<p>Optionally, read what caused that problem to avoid it next time.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>The above text starts with two long conceptual paragraphs and the error message is buried at the end of the section. In addition, the most important information - how to fix the problem - is missing. The text only mentions to enable replication between the two IdM servers, but does not tell how.</p>
-</div>
-<div class="paragraph">
-<p><strong>Improved:</strong></p>
-</div>
-<div class="paragraph">
-<p>An error stating that a certificate serial number was not found appears on a replicated server:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>Certificate operation cannot be completed: EXCEPTION (Certificate serial number 0x2d not found)</pre>
-</div>
-</div>
-<div class="paragraph">
-<p><em>What this means:</em> A certificate replication agreement between two replicas has been removed but a data replication agreement is still in place. Both replicas are still issuing certificates, but information about the certificates is no longer replicated.</p>
-</div>
-<div class="paragraph">
-<p>Example situation:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Replica A issues a certificate to a host.</p>
-</li>
-<li>
-<p>The certificate is not replicated to replica B, because the replicas have no certificate replication agreement established.</p>
-</li>
-<li>
-<p>A user attempts to use replica B to manage the host.</p>
-</li>
-<li>
-<p>Replica B returns an error that it cannot verify the host&#8217;s certificate serial number. This is because replica B has information about the host in its data directory, but it does not have the host certificate in its certificate directory.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><em>To fix the problem:</em></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Enable certificate server replication between the two replicas using the <code>ipa-csreplica-manage connect</code> command. See <a href="http://jenkinscat.gsslab.pnq.redhat.com:8080/job/doc-Red_Hat_Enterprise_Linux-7-Linux_Domain_Identity_Authentication_and_Policy_Guide%20%28html-single%29/lastStableBuild/artifact/tmp/en-US/html-single/index.html#create-delete-repl-agmt">Section 32.3, “Creating and Removing Replication Agreements”</a>.</p>
-</li>
-<li>
-<p>Re-initialize one of the replicas from the other to synchronize them. See <a href="http://jenkinscat.gsslab.pnq.redhat.com:8080/job/doc-Red_Hat_Enterprise_Linux-7-Linux_Domain_Identity_Authentication_and_Policy_Guide%20%28html-single%29/lastStableBuild/artifact/tmp/en-US/html-single/index.html#initialize">Section 32.5, “Re-initializing a Replica”</a>.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="example-information-is-in-the-best-possible-location">B.4. The "Information is in the best possible location" example</h3>
-<div class="paragraph">
-<p><strong>Example:</strong></p>
-</div>
-<div class="paragraph">
-<div class="title">5.3.1. One-way and two-way trusts</div>
-<p>IdM supports two types of trust agreements, depending on whether the entities that can establish connection to services in IdM are limited to only AD or can include IdM entities as well.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">One-way trust</dt>
-<dd>
-<p>One-way trust enables users and groups in AD to access resources in IdM, but not the other way around. The IdM domain trusts the Active Directory forest using the AD cross-forest trust feature, but the AD forest does not trust the IdM domain. One-way trust is the default mode for creating a trust. Running the <code>ipa trust-add</code> command without the <code>--two-way</code> option automatically sets up a one-way trust.</p>
-</dd>
-<dt class="hdlist1">Two-way trust</dt>
-<dd>
-<p>Two-way trust enables AD users and groups to access resources in IdM. However, the two-way trust in IdM does not give the users any additional rights compared to the one-way trust solution in AD. To set up a two-way trust, pass the <code>--two-way=true</code> option with the <code>ipa trust-add</code> command.</p>
-</dd>
-</dl>
-</div>
-<div class="paragraph">
-<div class="title">5.3.4. Creating a trust from the command line</div>
-<p><em>&#8230;&#8203;content&#8230;&#8203;</em></p>
-</div>
-<div class="paragraph">
-<div class="title">5.3.4.1. Preparing the IdM server for trust</div>
-<p><em>&#8230;&#8203;content&#8230;&#8203;</em></p>
-</div>
-<div class="paragraph">
-<div class="title">5.3.4.2. Creating a trust agreement</div>
-<p>Create a trust agreement for the Active Directory domain and the IdM domain by using the <code>ipa trust-add</code> command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre># ipa trust-add --type=type ad_domain_name --admin ad_admin_username --password</pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Problem:</strong></p>
-</div>
-<div class="paragraph">
-<p>The <em>One-Way and Two-Way Trusts</em> section includes both:</p>
-</div>
 <div class="ulist">
+<div class="title">Cons</div>
 <ul>
 <li>
-<p>Conceptual information about creating a trust in Identity Management</p>
+<p>Copying and pasting large chunks of content from HTML or PDF into a Google Doc can produce unreliable formatting.</p>
 </li>
 <li>
-<p>Particular commands how to do it</p>
+<p>Copying and pasting AsciiDoc content into a Google Doc can be time consuming.</p>
+</li>
+<li>
+<p>Copying and pasting markup syntax into a Google Doc might lead to formatting issues for the pasted syntax.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>Therefore, the section mingles together:</p>
 </div>
+<div class="sect2">
+<h3 id="email">Email</h3>
 <div class="ulist">
+<div class="title">Pros</div>
 <ul>
 <li>
-<p>Information that the user needs <em>before</em> doing the task</p>
+<p>Email is an easy tool for anyone to use.</p>
 </li>
 <li>
-<p>Information that the user needs <em>while</em> doing the task</p>
+<p>Messages provide an easy reference point for a writer.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>Users might not expect to have particular how-to information in a conceptual section. Also, in the guide there was already a more suitable section for this kind of information (<em>Creating a Trust Agreement</em>).</p>
-</div>
-<div class="paragraph">
-<p>In addition, in this particular case, a number of prerequisites must be completed before creating a trust. They are not mentioned in the <em>One-Way and Two-Way Trusts</em> section.</p>
-</div>
-<div class="paragraph">
-<p><strong>Improved:</strong></p>
-</div>
-<div class="paragraph">
-<p>The information about the command-line options was moved from the conceptual section to the section containing steps how to create a trust. Also, the sections are now linked together.</p>
-</div>
-<div class="paragraph">
-<div class="title">5.1. Introduction to cross-forest trusts</div>
-<p><em>&#8230;&#8203; some other sections &#8230;&#8203;</em></p>
-</div>
-<div class="paragraph">
-<div class="title">5.1.4. One-way and two-way Trusts</div>
-<p>IdM supports two types of trust agreements, depending on whether the entities that can establish connection to services in IdM are limited to only AD or can include IdM entities as well.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">One-way trust</dt>
-<dd>
-<p>One-way trust enables users and groups in AD to access resources in IdM, but not the other way around. The IdM domain trusts the Active Directory forest using the AD cross-forest trust feature, but the AD forest does not trust the IdM domain.</p>
-<div class="paragraph">
-<p>One-way trust is the default mode for creating a trust.</p>
-</div>
-</dd>
-<dt class="hdlist1">Two-way trust</dt>
-<dd>
-<p>Two-way trust enables AD users and groups to access resources in IdM. However, the two-way trust in IdM does not give the users any additional rights compared to the one-way trust solution in AD.</p>
-</dd>
-</dl>
-</div>
-<div class="paragraph">
-<p>See <em>Section 5.2, "Creating Cross-forest Trusts"</em> for details on creating one-way and two-way trust.</p>
-</div>
-<div class="paragraph">
-<div class="title">5.2. Creating cross-forest trusts</div>
-<p><em>&#8230;&#8203;content&#8230;&#8203;</em></p>
-</div>
-<div class="paragraph">
-<div class="title">5.2.1. Environment and machine requirements</div>
-<p><em>&#8230;&#8203;content&#8230;&#8203;</em></p>
-</div>
-<div class="paragraph">
-<div class="title">5.2.2. Creating trusts</div>
-<p><em>&#8230;&#8203;some other sections&#8230;&#8203;</em></p>
-</div>
-<div class="paragraph">
-<div class="title">5.2.2.1.2. Creating a trust agreement</div>
-<p>Create a trust agreement for the Active Directory domain and the IdM domain by using the <code>ipa trust-add</code> command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre># ipa trust-add --type=type ad_domain_name --admin ad_admin_username --password</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The <code>ipa trust-add</code> command sets up a one-way trust by default. To establish a two-way trust, pass the <code>--two-way=true</code> option. See <em>Section 5.1.4, “One-Way and Two-Way Trusts”</em> for details.</p>
+<div class="ulist">
+<div class="title">Cons</div>
+<ul>
+<li>
+<p>Email capabilities make it difficult to link to specific email comments.</p>
+</li>
+<li>
+<p>Email can be slow and time-consuming.</p>
+</li>
+<li>
+<p>Feedback is difficult to comprehend if the content is not structured well.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="example-include-troubleshooting-and-error-recognition-steps-where-appropriate">B.5. The "Include troubleshooting and error recognition steps where appropriate" example</h3>
-<div class="paragraph">
-<p><strong>Example:</strong></p>
-</div>
-<div class="olist arabic">
-<div class="title">Command Line: Creating HBAC rules</div>
-<ol class="arabic">
+<h3 id="irc-google-chat-slack">IRC, Google chat, or Slack</h3>
+<div class="ulist">
+<div class="title">Pros</div>
+<ul>
 <li>
-<p>Use the <code>ipa hbacrule-add</code> command to add the rule.</p>
-<div class="paragraph">
-<p><em>&#8230;&#8203; specific steps how to do it&#8230;&#8203;</em></p>
-</div>
+<p>Instant messaging is a fast communication tool.</p>
 </li>
 <li>
-<p>Specify the target users.</p>
-<div class="paragraph">
-<p><em>&#8230;&#8203; specific steps how to do it&#8230;&#8203;</em></p>
-</div>
+<p>Instant notifications are possible if a peer reviewer is online.</p>
 </li>
 <li>
-<p>Specify the target hosts.</p>
-<div class="paragraph">
-<p><em>&#8230;&#8203; specific steps how to do it&#8230;&#8203;</em></p>
+<p>Instant messaging provides an opportunity for immediate discussion.</p>
+</li>
+</ul>
 </div>
+<div class="ulist">
+<div class="title">Cons</div>
+<ul>
+<li>
+<p>Participants must be online for IRC.</p>
 </li>
 <li>
-<p>Specify the target HBAC services.</p>
-<div class="paragraph">
-<p><em>&#8230;&#8203; specific steps how to do it&#8230;&#8203;</em></p>
-</div>
+<p>Message entry box has spatial limitations.</p>
 </li>
-</ol>
+</ul>
 </div>
-<div class="paragraph">
-<p><strong>Problem:</strong></p>
 </div>
-<div class="paragraph">
-<p>By following these steps, users cannot verify if the rule has been added correctly, which might cause problems later.</p>
-</div>
-<div class="paragraph">
-<p><strong>Improved:</strong></p>
-</div>
-<div class="olist arabic">
-<div class="title">Command Line: Creating HBAC rules</div>
-<ol class="arabic">
+<div class="sect2">
+<h3 id="jira-bugzilla">Jira or Bugzilla ticket</h3>
+<div class="ulist">
+<div class="title">Pros</div>
+<ul>
 <li>
-<p>Use the <code>ipa hbacrule-add</code> command to add the rule.</p>
-<div class="paragraph">
-<p><em>&#8230;&#8203; specific steps how to do it&#8230;&#8203;</em></p>
-</div>
+<p>Multiple reviewers, such as a technical writer, peer reviewer, QE, and so on, can collaborate and confirm updates before any change is made.</p>
 </li>
 <li>
-<p>Specify the target users.</p>
-<div class="paragraph">
-<p><em>&#8230;&#8203; specific steps how to do it&#8230;&#8203;</em></p>
+<p>Anyone following the ticket receives comments.</p>
+</li>
+</ul>
 </div>
+<div class="ulist">
+<div class="title">Cons</div>
+<ul>
+<li>
+<p>Submitted comments might be hard to edit.</p>
 </li>
 <li>
-<p>Specify the target hosts.</p>
-<div class="paragraph">
-<p><em>&#8230;&#8203; specific steps how to do it&#8230;&#8203;</em></p>
-</div>
+<p>Inline comments are hard to provide on the ticket.</p>
 </li>
 <li>
-<p>Specify the target HBAC services.</p>
-<div class="paragraph">
-<p><em>&#8230;&#8203; specific steps how to do it&#8230;&#8203;</em></p>
-</div>
+<p>Unwanted communications might result if too many users are following the ticket.</p>
 </li>
 <li>
-<p><em>Optional.</em> Verify that the HBAC rule has been added correctly.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Use the <code>ipa hbacrule-find</code> command to verify that the HBAC rule has been added to IdM.</p>
+<p>Lengthy content can be tedious to discuss with comments on a ticket.</p>
 </li>
 <li>
-<p>Use the <code>ipa hbacrule-show</code> command to verify the properties of the HBAC rule.</p>
+<p>Limited space makes it harder to add comments.</p>
 </li>
-</ol>
-</div>
-</li>
-</ol>
+</ul>
 </div>
 </div>
 </div>
@@ -2431,7 +977,7 @@ To work around this, enable replication between the two IdM servers.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-01-17 08:03:40 -0500
+Last updated 2022-01-17 14:13:33 GMT
 </div>
 </div>
 </body>
