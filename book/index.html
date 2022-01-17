@@ -425,9 +425,43 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .show-for-print{display:inherit!important}}
 </style>
 </head>
-<body class="book">
+<body class="book toc2 toc-left">
 <div id="header">
 <h1>Peer review guide</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#guidelines-creating-peer-review-process">Creating a peer review process</a>
+<ul class="sectlevel2">
+<li><a href="#considerations-creating-peer-review-process">Considerations when creating a peer review process</a>
+<ul class="sectlevel3">
+<li><a href="#peer-review-optional-required">Is a peer review required or optional?</a></li>
+<li><a href="#who-are-peer-reviewers">Who are the peer reviewers?</a></li>
+<li><a href="#writer-request-review">How does a writer request a peer review?</a></li>
+<li><a href="#peer-reviewer-assigned">How is the peer reviewer assigned?</a></li>
+<li><a href="#level-scope-review">What is the level or scope of the peer review?</a></li>
+<li><a href="#checklist-for-reviewer">Is there a checklist for the peer reviewer to follow?</a></li>
+<li><a href="#platform-tools-used">What platform and tools are used to perform the review and give feedback?</a></li>
+<li><a href="#expected-turnaround-time">What is the expected turnaround time?</a></li>
+<li><a href="#urgent-peer-reviews-escalated">How do urgent peer reviews get escalated?</a></li>
+<li><a href="#peer-review-feedback-incorporated">How is peer review feedback incorporated?</a></li>
+</ul>
+</li>
+<li><a href="#finalizing-team-peer-review-process">Finalizing your team&#8217;s peer review process</a></li>
+</ul>
+</li>
+<li><a href="#pros-cons-peer-review-platforms">Appendix A: Pros and cons of the different peer review platforms</a>
+<ul class="sectlevel2">
+<li><a href="#github-gitlab">GitHub or GitLab</a></li>
+<li><a href="#google-docs">Google Docs</a></li>
+<li><a href="#email">Email</a></li>
+<li><a href="#irc-google-chat-slack">IRC, Google chat, or Slack</a></li>
+<li><a href="#jira-bugzilla">Jira or Bugzilla ticket</a></li>
+</ul>
+</li>
+</ul>
+</div>
 </div>
 <div id="content">
 <div id="preamble">
@@ -440,10 +474,510 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="introduction">Introduction</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="guidelines-creating-peer-review-process">Creating a peer review process</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Red Hat Customer Content Services does not follow one definitive peer review process. Each team within CCS is different, depending on factors such as workflows, preferred tools, release cycles, engineering team preferences, and so on. Each team must determine a peer review process that works for them.</p>
+</div>
+<div class="paragraph">
+<p>The most important thing is to define a process, so that peer reviews are used consistently throughout your team.</p>
+</div>
+<div class="sect2">
+<h3 id="considerations-creating-peer-review-process">Considerations when creating a peer review process</h3>
+<div class="paragraph">
+<p>You must consider many factors before you set up a peer review process so that the process meets the needs of your team.</p>
+</div>
+<div class="paragraph">
+<p>Review the following factors:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#peer-review-optional-required">Is a peer review required or optional?</a></p>
+</li>
+<li>
+<p><a href="#who-are-peer-reviewers">Who are the peer reviewers?</a></p>
+</li>
+<li>
+<p><a href="#writer-request-review">How does a writer request a peer review?</a></p>
+</li>
+<li>
+<p><a href="#peer-reviewer-assigned">How is the peer reviewer assigned?</a></p>
+</li>
+<li>
+<p><a href="#level-scope-review">What is the level or scope of the peer review?</a></p>
+</li>
+<li>
+<p><a href="#checklist-for-reviewer">Is there a checklist for the peer reviewer to follow?</a></p>
+</li>
+<li>
+<p><a href="#platform-tools-used">What platform and tools are used to perform the review and give feedback?</a></p>
+</li>
+<li>
+<p><a href="#expected-turnaround-time">What is the expected turnaround time?</a></p>
+</li>
+<li>
+<p><a href="#urgent-peer-reviews-escalated">How do urgent peer reviews get escalated?</a></p>
+</li>
+<li>
+<p><a href="#peer-review-feedback-incorporated">How is peer review feedback incorporated?</a></p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="peer-review-optional-required">Is a peer review required or optional?</h4>
+<div class="paragraph">
+<p>Determine whether requesting a peer review is required or optional. A manager, Documentation Program Manager (DPM), or Content Stategist (CS) should communicate this expectation to the team.</p>
+</div>
+<div class="ulist">
+<div class="title">Example options</div>
+<ul>
+<li>
+<p>A peer review is required on each GitHub pull request (or GitLab merge request) prior to accepting the request.</p>
+</li>
+<li>
+<p>A peer review is only required in certain (defined) situations.</p>
+</li>
+<li>
+<p>A peer review is optional.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="who-are-peer-reviewers">Who are the peer reviewers?</h4>
+<div class="paragraph">
+<p>Determine who is expected to peer review. A manager, DPM, or CS should communicate this expectation to the team.</p>
+</div>
+<div class="ulist">
+<div class="title">Example options</div>
+<ul>
+<li>
+<p>Individuals can volunteer to be peer reviewers.</p>
+</li>
+<li>
+<p>Everyone on the team is expected to be available to review at any time.</p>
+</li>
+<li>
+<p>Everyone is expected to participate in peer reviews, and reviewers take turns being available.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="writer-request-review">How does a writer request a peer review?</h4>
+<div class="paragraph">
+<p>Determine how writers request a peer review.</p>
+</div>
+<div class="ulist">
+<div class="title">Example options</div>
+<ul>
+<li>
+<p>Add the request details to a tracking spreadsheet.</p>
+</li>
+<li>
+<p>Ping a reviewer in a Google Chat or Slack channel.</p>
+</li>
+<li>
+<p>Request a review through email.</p>
+</li>
+<li>
+<p>Use GitHub/GitLab labels to mark when content is ready for review.</p>
+</li>
+<li>
+<p>Open a Jira or Bugzilla with the request.</p>
+</li>
+<li>
+<p>Ping a reviewer in the original documentation ticket.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="peer-reviewer-assigned">How is the peer reviewer assigned?</h4>
+<div class="paragraph">
+<p>Determine how peer reviewers are assigned to review content. Some methods might work better if the reviewers are on the same product team. Other methods might work better for cross-product reviews. Establish a method that suits the structure and dynamic of the group of writers and reviewers that the process targets.</p>
+</div>
+<div class="paragraph">
+<p>Before a writer requests a peer review, the writer must ensure that the target peer review audience can access the peer review tracking mechanism and the content that requires a peer review. Otherwise, a peer reviewer cannot strictly follow the established peer review process for a product.</p>
+</div>
+<div class="ulist">
+<div class="title">Example options</div>
+<ul>
+<li>
+<p>Reviewers check a tracking spreadsheet and assign themselves.</p>
+</li>
+<li>
+<p>Peer reviewers are pinged with each request and assign themselves.</p>
+</li>
+<li>
+<p>Reviewers regularly check a GitHub pull request or a GitLab merge request queue and assign themselves.</p>
+</li>
+<li>
+<p>A writer contacts the peer reviewer.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="level-scope-review">What is the level or scope of the peer review?</h4>
+<div class="paragraph">
+<p>Determine the level or scope of the peer review request so the writer and reviewer have the same expectations.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The writer is responsible for informing the peer reviewer of any essential information related to the content.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Example options</div>
+<ul>
+<li>
+<p>Perform a basic typographic and link check.</p>
+</li>
+<li>
+<p>Perform a full review of the content that includes checks on typographic errors and grammar, content placement or flow, structure, style guide compliance, and so on.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="checklist-for-reviewer">Is there a checklist for the peer reviewer to follow?</h4>
+<div class="paragraph">
+<p>Determine what checklists and other resources the reviewer should follow.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The writer is responsible for informing the peer reviewer of any essential information related to the content.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Example options</div>
+<ul>
+<li>
+<p>Follow the CCS peer review checklist.</p>
+</li>
+<li>
+<p>Follow the CCS peer review checklist and a team-specific checklist.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="platform-tools-used">What platform and tools are used to perform the review and give feedback?</h4>
+<div class="paragraph">
+<p>Determine how to share content and how to provide feedback.</p>
+</div>
+<div class="ulist">
+<div class="title">Example options</div>
+<ul>
+<li>
+<p>Draft content in a Google Doc and use the document for comments and suggestions.</p>
+</li>
+<li>
+<p>Share a GitHub/GitLab pull request; reviewers can comment directly inline for each change.</p>
+</li>
+<li>
+<p>Provide small snippets of content by email, instant messaging, or a ticket.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For more information, see <a href="#pros-cons-peer-review-platforms">Pros and cons of the different peer review platforms</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="expected-turnaround-time">What is the expected turnaround time?</h4>
+<div class="paragraph">
+<p>Determine the expected turnaround time for completing a peer review. Writers should communicate if there is any urgency or deadlines for the review.</p>
+</div>
+<div class="ulist">
+<div class="title">Example options</div>
+<ul>
+<li>
+<p>Reviewers are expected to check the GitHub/GitLab queue daily or twice daily.</p>
+</li>
+<li>
+<p>Peer reviewers are expected to respond to a Slack or Google Chat ping within a few hours.</p>
+</li>
+<li>
+<p>Reviewers are expected to check the tracking spreadsheet daily.</p>
+</li>
+<li>
+<p>Writers are expected to communicate the requested turnaround time after requesting the peer review.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="urgent-peer-reviews-escalated">How do urgent peer reviews get escalated?</h4>
+<div class="paragraph">
+<p>Determine how an unassigned peer review request should be escalated if it could affect product release schedules.</p>
+</div>
+<div class="ulist">
+<div class="title">Example options</div>
+<ul>
+<li>
+<p>Inform a manager, DPM, or CS of the unassigned time-critical peer review, so that they can escalate the peer review request or negotiate a new timeline for reviewing the content.</p>
+</li>
+<li>
+<p>Use the peer review request channel that you established to request an urgent peer review. Ensure you detail the tight timelines in the channel, and assist a volunteer peer reviewer in a way that they can review the content with minimal distractions.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="peer-review-feedback-incorporated">How is peer review feedback incorporated?</h4>
+<div class="paragraph">
+<p>Determine the expectations for addressing or incorporating feedback. Expectations become important if the writer and peer reviewer disagree on a review item.</p>
+</div>
+<div class="paragraph">
+<p>Incorporate an escalation process into your peer review process, such as requesting manager, DPM, or CS input or communicating in a guidelines group. This way, any disagreement between a writer and peer reviewer can be resolved.</p>
+</div>
+<div class="ulist">
+<div class="title">Example options</div>
+<ul>
+<li>
+<p>Incorporate feedback at the writer&#8217;s discretion.</p>
+</li>
+<li>
+<p>Establish a communication channel for informing the peer reviewer of the next steps.</p>
+</li>
+<li>
+<p>Address peer review feedback and request the peer reviewer to perform a review of the revised content.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="finalizing-team-peer-review-process">Finalizing your team&#8217;s peer review process</h3>
+<div class="paragraph">
+<p>Both writers and peer reviewers must agree on the expectations for the peer review process.</p>
+</div>
+<div class="paragraph">
+<p>Complete the following steps to finalize the peer review process:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Draft a proposal for the peer review process.</p>
+</li>
+<li>
+<p>Share the proposal with the team and allow time for the team to provide feedback.</p>
+</li>
+<li>
+<p>Test the process to be sure that it works well for your team.</p>
+</li>
+<li>
+<p>Document the final process wherever your team stores its resources.</p>
+</li>
+<li>
+<p>Communicate the final process to the team and to any other contributors or stakeholders.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="pros-cons-peer-review-platforms">Appendix A: Pros and cons of the different peer review platforms</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Review the following pros and cons for each platform to choose the right peer review method for your team.</p>
+</div>
+<div class="sect2">
+<h3 id="github-gitlab">GitHub or GitLab</h3>
+<div class="ulist">
+<div class="title">Pros</div>
+<ul>
+<li>
+<p>Provides a convenient method for commenting on specific lines of content on a GitHub pull request (PR) or GitLab merge request (MR).</p>
+</li>
+<li>
+<p>Includes functionality for easily adding additional reviewers.</p>
+</li>
+<li>
+<p>Includes a mechanism for multiple people, such as writers, SMEs, or QEs, involved in a Jira ticket or Bugzilla ticket to collaborate on the same PR or MR.</p>
+</li>
+<li>
+<p>Provides an easy linking functionality.</p>
+</li>
+<li>
+<p>Offers the capability for writers to incorporate feedback before the PR or MR is approved.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Cons</div>
+<ul>
+<li>
+<p>Users must have familiarity with the GitHub or GitLab UI.</p>
+</li>
+<li>
+<p>Users must have a login to comment on a PR or MR.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="google-docs">Google Docs</h3>
+<div class="ulist">
+<div class="title">Pros</div>
+<ul>
+<li>
+<p>Includes a convenient method for commenting on specific text.</p>
+</li>
+<li>
+<p>Includes functionality for easily adding additional reviewers.</p>
+</li>
+<li>
+<p>Includes a mechanism for multiple people, such as writers, SMEs, or QEs, involved in a Jira ticket or Bugzilla ticket to collaborate on the same Google Doc.</p>
+</li>
+<li>
+<p>Provides an easy linking functionality.</p>
+</li>
+<li>
+<p>Allows you to copy and paste AsciiDoc content into a Google Doc.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Cons</div>
+<ul>
+<li>
+<p>Copying and pasting large chunks of content from HTML or PDF into a Google Doc can produce unreliable formatting.</p>
+</li>
+<li>
+<p>Copying and pasting AsciiDoc content into a Google Doc can be time consuming.</p>
+</li>
+<li>
+<p>Copying and pasting markup syntax into a Google Doc might lead to formatting issues for the pasted syntax.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="email">Email</h3>
+<div class="ulist">
+<div class="title">Pros</div>
+<ul>
+<li>
+<p>Email is an easy tool for anyone to use.</p>
+</li>
+<li>
+<p>Messages provide an easy reference point for a writer.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Cons</div>
+<ul>
+<li>
+<p>Email capabilities make it difficult to link to specific email comments.</p>
+</li>
+<li>
+<p>Email can be slow and time-consuming.</p>
+</li>
+<li>
+<p>Feedback is difficult to comprehend if the content is not structured well.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="irc-google-chat-slack">IRC, Google chat, or Slack</h3>
+<div class="ulist">
+<div class="title">Pros</div>
+<ul>
+<li>
+<p>Instant messaging is a fast communication tool.</p>
+</li>
+<li>
+<p>Instant notifications are possible if a peer reviewer is online.</p>
+</li>
+<li>
+<p>Instant messaging provides an opportunity for immediate discussion.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Cons</div>
+<ul>
+<li>
+<p>Participants must be online for IRC.</p>
+</li>
+<li>
+<p>Message entry box has spatial limitations.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="jira-bugzilla">Jira or Bugzilla ticket</h3>
+<div class="ulist">
+<div class="title">Pros</div>
+<ul>
+<li>
+<p>Multiple reviewers, such as a technical writer, peer reviewer, QE, and so on, can collaborate and confirm updates before any change is made.</p>
+</li>
+<li>
+<p>Anyone following the ticket receives comments.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Cons</div>
+<ul>
+<li>
+<p>Submitted comments might be hard to edit.</p>
+</li>
+<li>
+<p>Inline comments are hard to provide on the ticket.</p>
+</li>
+<li>
+<p>Unwanted communications might result if too many users are following the ticket.</p>
+</li>
+<li>
+<p>Lengthy content can be tedious to discuss with comments on a ticket.</p>
+</li>
+<li>
+<p>Limited space makes it harder to add comments.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-12-08 16:18:19 GMT
+Last updated 2022-01-17 14:52:11 GMT
 </div>
 </div>
 </body>
