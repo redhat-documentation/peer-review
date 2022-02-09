@@ -431,7 +431,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#introduction">Introduction</a></li>
+<li><a href="#introduction">Introduction</a>
+<ul class="sectlevel2">
+<li><a href="#about-this-guide">About this guide</a></li>
+<li><a href="#purpose">Purpose of peer reviews</a></li>
+</ul>
+</li>
+<li><a href="#providing-feedback">Providing feedback as a peer reviewer</a></li>
 <li><a href="#guidelines-creating-peer-review-process">Creating a peer review process</a>
 <ul class="sectlevel2">
 <li><a href="#considerations-creating-peer-review-process">Considerations when creating a peer review process</a>
@@ -449,6 +455,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="#finalizing-team-peer-review-process">Finalizing your team&#8217;s peer review process</a></li>
+<li><a href="#ref_example-peer-review-process1">Example peer review process 1</a></li>
+<li><a href="#ref_example-peer-review-process2">Example peer review process 2</a></li>
 </ul>
 </li>
 <li><a href="#pros-cons-peer-review-platforms">Appendix A: Pros and cons of the different peer review platforms</a>
@@ -460,15 +468,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#jira-bugzilla">Jira or Bugzilla ticket</a></li>
 </ul>
 </li>
+<li><a href="#ref_an-index-of-peer-review-resources_{context}">Appendix B: An index of peer review resources</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
-<div class="paragraph">
-<p>This guide provides information about peer reviewing Red Hat product documentation.</p>
-</div>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -483,15 +489,273 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p>The Red Hat Customer Content Services team created this guide as part of its responsibility for producing product documentation for Red Hat customers. Upstream communities who want to align more closely with the standards used by Red Hat product documentation can also use this guide.</p>
-</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="introduction">Introduction</h2>
 <div class="sectionbody">
-
+<div class="sect2">
+<h3 id="about-this-guide">About this guide</h3>
+<div class="paragraph">
+<p>This guide provides information about peer reviewing Red Hat product documentation.</p>
+</div>
+<div class="paragraph">
+<p>The Red Hat Customer Content Services team created this guide as part of its responsibility for creating product documentation for Red Hat customers. Upstream communities who want to align more closely with the standards used by Red Hat product documentation can also use this guide.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="purpose">Purpose of peer reviews</h3>
+<div class="paragraph">
+<p>It&#8217;s recommended to perform a peer review on all updates to the documentation.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Peer reviews ensure a higher quality of our content which helps our users.</p>
+</li>
+<li>
+<p>Reviewers should present their comments positively and avoid negative wording.</p>
+</li>
+<li>
+<p>Authors must be open to reviewers' feedback. A second set of eyes can catch things that an author missed.</p>
+</li>
+<li>
+<p>Peer reviews give both authors and reviewers a chance to see more content, find new ways to approach changes, and share expertise.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="providing-feedback">Providing feedback as a peer reviewer</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Peer reviews should be kind, helpful, and consistent among peer reviewers.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Use a respectful tone</strong> in a peer review.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Support your suggested changes with documented resources such as style guides or Red Hat writing conventions.</p>
+</li>
+<li>
+<p>Pose comments as questions when you are unsure.</p>
+</li>
+<li>
+<p>Choose your wording carefully - do not be harsh. It is fine to be concise when it is a straightforward change. However, if it is a suggestion, ask them to “consider” your comment, or that you “suggest” something.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Stay within scope</strong> of reviewing new content, changed content, and the necessary context.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Review content that was changed in the pull request (PR) or merge request (MR).</p>
+</li>
+<li>
+<p>Review the pre-existing section to ensure the new or updated content fits.</p>
+</li>
+<li>
+<p>Do not request enhancements to the content unless the content is unclear without it.</p>
+</li>
+<li>
+<p>If you notice an issue that was already in the existing content, use friendly wording such as “I know this was already there, but would you mind fixing that typo while you’re in there?”, or “I know this is out of scope for this PR, but in a future update maybe consider looking into this.” The author should either address it now, track it as a future request, or let the peer reviewer know that it is not something that they can address.</p>
+</li>
+<li>
+<p>See <a href="#scope-examples">Scope examples</a> for more details on what is in or out of scope.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Differentiate between required and suggested changes.</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Required changes must be fixed before the PR or MR can be merged. Support your change with a reference to the relevant style guide or principle. Examples: modular docs template adherence, typo fixes, following product-specific guidelines.</p>
+</li>
+<li>
+<p>Suggested changes do not have to be addressed before the PR or MR can be merged. Use softer language, for example, “Here, it might be clearer to&#8230;&#8203;:” or a [SUGGESTION] tag to clearly indicate it to the author. Examples: wording improvements, content relocation, stylistic preference.</p>
+</li>
+<li>
+<p>See <a href="#scope-examples">Scope examples</a> for more details on required versus suggested changes.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Understand that peer reviewers are not responsible for reviewing for technical accuracy.</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>SMEs and QE are responsible for testing and technical accuracy.</p>
+</li>
+<li>
+<p>Peer reviewers check for things like usability issues and making sure that you can follow the steps in a procedure.</p>
+</li>
+<li>
+<p>Peer reviewers do not need to question all technical details to understand everything themselves because the audience might be for users who are already familiar with the technology. Requests for additional technical information should be requested as a followup and not a requirement for the current PR.</p>
+</li>
+<li>
+<p>However, some peer reviewers might be more familiar with a particular subject area or might know that an update might impact another area of the documentation. This is an appropriate situation to provide feedback on and explain your concern.</p>
+</li>
+<li>
+<p>If you are certain that something is wrong or that a command will fail, ask the contributor to double check with their SME/QE. Avoid tagging their SMEs/QEs directly to ask.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Recognize that contributors do not have to accept all of your suggestions.</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Some things are required, but other things are nice-to-haves. If it does not break any guidelines or is not an actual typo or issue, then you can often let authors keep it as it was.</p>
+</li>
+<li>
+<p>If you are responsible for merging a PR or MR and feel strongly that the author should make a change, but they disagree, speak to the author in private. Cite style guides or vetted documentation so that they know your reasoning. Make sure that you listen to their perspective. If the topic of the disagreement is not in any of the guides, consider bringing it to the team for discussion. In some cases, the guidelines might need to be updated.</p>
+</li>
+<li>
+<p>After completing your review, clearly mark it following your team’s best practice.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Add your own suggestions for improvements</strong> for a problematic area, rather than just “this doesn’t make sense”</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Offer rewrites as suggestions; not something that the author has to take word-for-word. For example, “I don’t understand this description. Did you mean&#8230;&#8203;?”</p>
+</li>
+<li>
+<p>Avoid rewriting entire paragraphs of the author’s content. If you find yourself doing this because there are multiple items in a paragraph that need attention, attempt to break out your suggestions. If you feel that providing an alternative paragraph wording is necessary, ensure that you make it clear that the author does not need to use your suggestion exactly.</p>
+</li>
+<li>
+<p>If you notice a recurring issue, you can leave a global comment for the writer so that they know to address every instance of the issue. For example: "[GLOBAL] This typo occurs in other locations within the doc. I won&#8217;t comment on the other examples after this point but please address all instances."</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>If the review requires a significant amount of editing or rework, consider pausing the review and reaching out to the author directly to discuss.</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>This avoids overwhelming the author with too many comments and saves the peer reviewer’s time from reviewing content that might not be ready for peer review.</p>
+</li>
+<li>
+<p>Examples of when to pause a review include if the build is broken, if the content is not rendering properly, or if the content is not modularized properly.</p>
+</li>
+<li>
+<p>Reach out to the author privately, for example by chat, to express your concerns and provide advice on how to move forward.</p>
+</li>
+<li>
+<p>Decide whether you have the bandwidth to work with the author, or if you need to request that they reach out to someone else, for example, an onboarding buddy or another senior writing member.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="scope-examples" class="paragraph">
+<div class="title">Scope examples</div>
+<p>This table provides examples of items that are in scope and required, in scope but just suggested, and out of scope. It is not a comprehensive list.</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">In scope - required</th>
+<th class="tableblock halign-left valign-top">In scope - suggested</th>
+<th class="tableblock halign-left valign-top">Out of scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Typos, grammatical issues, formatting issues</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p>Rearranging:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Suggesting to consider moving something to the prerequisites section.</p>
+</li>
+<li>
+<p>Moving verification steps out of the “.Procedure” and into a specific “.Verification” section in the procedure module, if applicable</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comments on content that was not changed in the PR.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p><a href="https://redhat-documentation.github.io/modular-docs/">Modular docs guidelines</a>, for example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Adhering to the templates</p>
+</li>
+<li>
+<p>Proper anchor ID format</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reviewing wording that does not sound right to the reviewer to see if it can be improved.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Requesting additional details like default values or units.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p>IBM Style Guide
+ and <a href="https://redhat-documentation.github.io/supplementary-style-guide/">CCS supplementary style guide</a> guidelines, for example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>may &#8594; might</p>
+</li>
+<li>
+<p>Click the <strong>Save</strong> button. &#8594; Click <strong>Save</strong>.</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Avoiding sequences of admonitions, for example a [NOTE] followed by an [IMPORTANT] block, especially if they are the same type of admonition.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Technical accuracy - that is for SME/QE. Unless you know for certain something is wrong or that a command will fail.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p>Product-specific guidelines, for example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Prompts on terminal commands</p>
+</li>
+<li>
+<p>Separating commands into individual code blocks</p>
+</li>
+<li>
+<p>Sentence case in titles</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="sect1">
@@ -817,6 +1081,36 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ol>
 </div>
 </div>
+<div class="sect2">
+<h3 id="ref_example-peer-review-process1">Example peer review process 1</h3>
+<div class="paragraph">
+<p>The following diagram outlines an example process for a cross-product team that uses Jira tickets for communication and GitLab to perform peer reviews. This process requires that an SME review is completed first. The peer review squad consists of at least two members at any specific time. Membership of the squad rotates every week. The team maintains a peer review assignment roster in a Confluence page that lists the assigned reviewers for each week. The assignment roster is published in the Jira product dashboards, so that writers can see the assigned reviewers for the current week.</p>
+</div>
+<div class="paragraph">
+<p>Writers submit requests for peer review by pinging the assigned reviewers in their Jira documentation tickets. The assigned reviewers agree among themselves who will perform each review. The reviewer performs the review in GitLab by submitting feedback on a merge request.</p>
+</div>
+<div id="example-1-peer-review-process" class="imageblock">
+<div class="content">
+<img src="images/example_peer_review_process1_image.png" alt="example peer review process1 image">
+</div>
+<div class="title">Figure 1. Example 1 of a peer review process</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ref_example-peer-review-process2">Example peer review process 2</h3>
+<div class="paragraph">
+<p>The following diagram outlines an example process for a team that uses a Slack channel for communication and GitHub to perform peer reviews. The peer review team consists of five team members at any specific time. Membership of the peer review team rotates every sprint.</p>
+</div>
+<div class="paragraph">
+<p>Writers submit requests for peer review by using a Slack channel. Peer reviewers self-assign pull requests to review as their bandwidth allows. The reviewer performs the review on GitHub by submitting feedback on a pull request.</p>
+</div>
+<div id="example-2-peer-review-process" class="imageblock">
+<div class="content">
+<img src="images/example_peer_review_process2_image.png" alt="example peer review process2 image">
+</div>
+<div class="title">Figure 2. Example 2 of a peer review process</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -988,10 +1282,141 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="ref_an-index-of-peer-review-resources_{context}">Appendix B: An index of peer review resources</h2>
+<div class="sectionbody">
+<div class="paragraph _abstract">
+<p>This section lists the available tools and resources available for peer reviewing docs (apart from this Guide itself, of course).</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. Validation tools</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Resource</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/redhat-documentation/newdoc">Newdoc</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A script for creating new files for a modular documetation repo. Can also be used to <a href="https://github.com/redhat-documentation/newdoc#validating-a-file-for-red-hat-requirements">validate</a> whether a piece of content adheres to Red Hat docs markup and structure standards.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://redhat-documentation.github.io/vale-at-red-hat/docs/end-user-guide/introduction/">Vale for Red Hat documentation writers</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A linting system that validates whether your text is compatible with Red Hat writing style.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/wjdp/htmltest">htmltest</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A test that validates whether the links in your HTML work.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.grammarly.com/">Grammarly</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A browser plug-in that checks your English spelling and grammar, but also helps improve your writing style.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 2. Style resources</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Resource</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://redhat-documentation.github.io/supplementary-style-guide/">Red Hat supplementary style guide for product documentation</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A guide for writing documentation the Red Hat way, including style guidelines, formatting, and a glossary of terms and conventions.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.google.com/presentation/d/1Yeql9FrRBgKU-QlRU-nblPJ9pfZKgoKcU8SW6SQ_UqI/edit#slide=id.g1f4790d380_2_176">The Wisdon of Crowds slides</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A slide deck on Red Hat&#8217;s community outreach, including the principles of minimalism in writing documentation.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 3. Markup resources</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Resource</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://redhat-documentation.github.io/asciidoc-markup-conventions/">Red Hat AsciiDoc markup conventions</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Guidelines on using the AsciiDoc markup language in Red Hat documentation projects.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 4. Structure resources</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Resource</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://redhat-documentation.github.io/modular-docs/">Red Hat modular documentation reference guide</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Instructions for creating documentation in a modular fashion, with templates and examples.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.nngroup.com/articles/chunking/">How chunking helps content processing</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tips for structuring your docs content in a visually comprehensible way.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://antora-for-modular-docs.github.io/antora-for-modular-docs/docs/end-user-guide/introduction/">Starting a modular documentation Project in Antora</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">How to create a community docs project using the Antora toolchain.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 5. Methodology resources</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Resource</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://redhat-documentation.github.io/community-collaboration-guide/">Red Hat community collaboration guide</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tips and best practices for Red Hat and the upstream community joining forces on documentation projects.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.youtube.com/watch?v=7iWUSetbaos">How to edit other people&#8217;s content without pissing them off</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ingrid Towey&#8217;s talk on doing peer reviews that inform and inspire but not infuriate.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-01-18 09:08:31 GMT
+Last updated 2022-02-09 11:32:34 GMT
 </div>
 </div>
 </body>
