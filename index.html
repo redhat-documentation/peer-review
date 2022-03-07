@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.6.1">
-<title>Peer review guide</title>
+<title>Red Hat peer review guide for technical documentation</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -427,7 +427,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="book toc2 toc-left">
 <div id="header">
-<h1>Peer review guide</h1>
+<h1>Red Hat peer review guide for technical documentation</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
@@ -438,36 +438,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="#providing-feedback">Providing feedback as a peer reviewer</a></li>
+<li><a href="#checklist">Peer review checklist</a></li>
 <li><a href="#guidelines-creating-peer-review-process">Creating a peer review process</a>
 <ul class="sectlevel2">
-<li><a href="#considerations-creating-peer-review-process">Considerations when creating a peer review process</a>
-<ul class="sectlevel3">
-<li><a href="#peer-review-optional-required">Is a peer review required or optional?</a></li>
-<li><a href="#who-are-peer-reviewers">Who are the peer reviewers?</a></li>
-<li><a href="#writer-request-review">How does a writer request a peer review?</a></li>
-<li><a href="#peer-reviewer-assigned">How is the peer reviewer assigned?</a></li>
-<li><a href="#level-scope-review">What is the level or scope of the peer review?</a></li>
-<li><a href="#checklist-for-reviewer">Is there a checklist for the peer reviewer to follow?</a></li>
-<li><a href="#platform-tools-used">What platform and tools are used to perform the review and give feedback?</a></li>
-<li><a href="#expected-turnaround-time">What is the expected turnaround time?</a></li>
-<li><a href="#urgent-peer-reviews-escalated">How do urgent peer reviews get escalated?</a></li>
-<li><a href="#peer-review-feedback-incorporated">How is peer review feedback incorporated?</a></li>
-</ul>
-</li>
+<li><a href="#considerations-creating-peer-review-process">Considerations when creating a peer review process</a></li>
 <li><a href="#finalizing-team-peer-review-process">Finalizing your team&#8217;s peer review process</a></li>
 <li><a href="#ref_example-peer-review-process1">Example peer review process 1</a></li>
 <li><a href="#ref_example-peer-review-process2">Example peer review process 2</a></li>
 </ul>
 </li>
-<li><a href="#pros-cons-peer-review-platforms">Appendix A: Pros and cons of the different peer review platforms</a>
-<ul class="sectlevel2">
-<li><a href="#github-gitlab">GitHub or GitLab</a></li>
-<li><a href="#google-docs">Google Docs</a></li>
-<li><a href="#email">Email</a></li>
-<li><a href="#irc-google-chat-slack">IRC, Google chat, or Slack</a></li>
-<li><a href="#jira-bugzilla">Jira or Bugzilla ticket</a></li>
-</ul>
-</li>
+<li><a href="#pros-cons-peer-review-platforms">Appendix A: Pros and cons of the different peer review platforms</a></li>
 <li><a href="#ref_an-index-of-peer-review-resources_{context}">Appendix B: An index of peer review resources</a></li>
 </ul>
 </div>
@@ -759,6 +739,399 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
+<h2 id="checklist">Peer review checklist</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The peer review checklist can be used by both writers and peer reviewers as a quick reference to the Red Hat technical documentation style guidelines. You can use the checklist to help structure your peer reviews, and adapt the checklist to meet the needs of your team.</p>
+</div>
+<div class="paragraph">
+<p>For guidance on each topic outlined in the checklist, see the following resources:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://redhat-documentation.github.io/supplementary-style-guide/#introduction">Red Hat supplementary style guide for product documentation</a></p>
+</li>
+<li>
+<p>Minimalism in Red Hat documentation</p>
+</li>
+<li>
+<p><a href="https://www.merriam-webster.com/">Merriam-Webster Dictionary</a></p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. Checklist</caption>
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 70%;">
+<col style="width: 10%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Topic</th>
+<th class="tableblock halign-left valign-top">Checked for</th>
+<th class="tableblock halign-left valign-top">Checked</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock"><strong>Language</strong></p></td>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p><strong>Spelling errors and typos</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>American English spelling is used consistently in the text.</p>
+</li>
+<li>
+<p>Correct punctuation is used in the text.</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p><strong>Grammar</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>American English grammar is used consistently in the text.</p>
+</li>
+<li>
+<p>Slang or non-English words are not used in the text.</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p><strong>Correct word usage and entity naming</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Words are used appropriately and in a context where the meaning, tone, and implications are used as intended.</p>
+</li>
+<li>
+<p>Named entities are qualified on first use.</p>
+</li>
+<li>
+<p>Contractions are avoided.</p>
+</li>
+<li>
+<p>Proper nouns are capitalized.</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p><strong>Correct use of acronyms and abbreviations</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Acronyms are expanded on first use.</p>
+</li>
+<li>
+<p>Abbreviations are used and applied correctly.</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p><strong>Terms and constructions to avoid</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Phrasal verbs are avoided.</p>
+</li>
+<li>
+<p>Use of verbs such as <em>should</em> or <em>may</em> are avoided.</p>
+</li>
+<li>
+<p>Use of anthropomorphism is avoided.</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="5"><p class="tableblock"><strong>Style</strong></p></td>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p><strong>Passive voice</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Unnecessary use of passive voice is avoided.</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p>Tense</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Future tense is used only when necessary.</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p><strong>Titles</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Titles use sentence case.</p>
+</li>
+<li>
+<p>Consistent styling is used for titles and headings.</p>
+</li>
+<li>
+<p>Titles are effective and descriptive.</p>
+</li>
+<li>
+<p>Titles of procedure modules begin with a gerund, for example "Configuring", "Using", "Installing."</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p><strong>Number</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use of number conventions are adhered to in the document.</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p><strong>Formatting</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Content adheres to the style and consistency guidelines for formatting, for example, user-replaceable values.</p>
+</li>
+<li>
+<p>Correct AsciiDoc markup is used.</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock"><strong>Minimalism</strong></p></td>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p>Customer focus and action orientation</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Content focuses on actions and customer tasks.</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p><strong>Sentences</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sentences are not unnecessarily long. Any long sentences that occur are not possible or appropriate to shorten.</p>
+</li>
+<li>
+<p>Sentences are concise and informative.</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p><strong>Fluff</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Unnecessary information is not included in the text.</p>
+</li>
+<li>
+<p>Admonitions are used only when necessary.</p>
+</li>
+<li>
+<p>Screenshots and diagrams are used only when necessary.</p>
+</li>
+<li>
+<p>Content is clear, concise, precise, and unambiguous.</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock"><strong>Structure</strong></p></td>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p><strong>Structure meets modular guidelines</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Mixing of module types, for example, concept and procedure, is avoided.</p>
+</li>
+<li>
+<p>Module types are used correctly.</p>
+</li>
+<li>
+<p>Tags and entities are used correctly.</p>
+</li>
+<li>
+<p>Modules are standalone and can be understood without additional context or information.</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p><strong>A logical flow of information</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Paragraphs are structured appropriately.</p>
+</li>
+<li>
+<p>Information is provided at the right pace.</p>
+</li>
+<li>
+<p>Information is presented in the most logical order and location.</p>
+</li>
+<li>
+<p>Cross references are used appropriately and only when useful.</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p><strong>User stories</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The text has a clear user goal.</p>
+</li>
+<li>
+<p>Tasks outlined in the text reflect the intended goal of the user.</p>
+</li>
+<li>
+<p>Troubleshooting and error recognition steps are included where appropriate.</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock"><strong>Usability</strong></p></td>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p><strong>Content</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The content is appropriate for the intended audience.</p>
+</li>
+<li>
+<p>The content is accessible.</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p><strong>Error mitigation</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Updates to the document satisfy the request requirements, for example the Jira task is complete.</p>
+</li>
+<li>
+<p>All required information is included.</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p><strong>Links</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use of inline links are minimized.</p>
+</li>
+<li>
+<p>All links in the document work.</p>
+</li>
+<li>
+<p>All links in the document are up-to-date.</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p><strong>Visual continuity</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The content renders correctly in preview, including correct spacing, bulleted lists, and numbering.</p>
+</li>
+<li>
+<p>Product versioning and release dates are accurate.</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#9744;</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
 <h2 id="guidelines-creating-peer-review-process">Creating a peer review process</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -809,8 +1182,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </div>
-<div class="sect3">
-<h4 id="peer-review-optional-required">Is a peer review required or optional?</h4>
+<h4 id="peer-review-optional-required" class="discrete">Is a peer review required or optional?</h4>
 <div class="paragraph">
 <p>Determine whether requesting a peer review is required or optional. A manager, Documentation Program Manager (DPM), or Content Stategist (CS) should communicate this expectation to the team.</p>
 </div>
@@ -828,9 +1200,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </div>
-</div>
-<div class="sect3">
-<h4 id="who-are-peer-reviewers">Who are the peer reviewers?</h4>
+<h4 id="who-are-peer-reviewers" class="discrete">Who are the peer reviewers?</h4>
 <div class="paragraph">
 <p>Determine who is expected to peer review. A manager, DPM, or CS should communicate this expectation to the team.</p>
 </div>
@@ -848,9 +1218,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </div>
-</div>
-<div class="sect3">
-<h4 id="writer-request-review">How does a writer request a peer review?</h4>
+<h4 id="writer-request-review" class="discrete">How does a writer request a peer review?</h4>
 <div class="paragraph">
 <p>Determine how writers request a peer review.</p>
 </div>
@@ -877,9 +1245,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </div>
-</div>
-<div class="sect3">
-<h4 id="peer-reviewer-assigned">How is the peer reviewer assigned?</h4>
+<h4 id="peer-reviewer-assigned" class="discrete">How is the peer reviewer assigned?</h4>
 <div class="paragraph">
 <p>Determine how peer reviewers are assigned to review content. Some methods might work better if the reviewers are on the same product team. Other methods might work better for cross-product reviews. Establish a method that suits the structure and dynamic of the group of writers and reviewers that the process targets.</p>
 </div>
@@ -903,9 +1269,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </div>
-</div>
-<div class="sect3">
-<h4 id="level-scope-review">What is the level or scope of the peer review?</h4>
+<h4 id="level-scope-review" class="discrete">What is the level or scope of the peer review?</h4>
 <div class="paragraph">
 <p>Determine the level or scope of the peer review request so the writer and reviewer have the same expectations.</p>
 </div>
@@ -934,9 +1298,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </div>
-</div>
-<div class="sect3">
-<h4 id="checklist-for-reviewer">Is there a checklist for the peer reviewer to follow?</h4>
+<h4 id="checklist-for-reviewer" class="discrete">Is there a checklist for the peer reviewer to follow?</h4>
 <div class="paragraph">
 <p>Determine what checklists and other resources the reviewer should follow.</p>
 </div>
@@ -965,9 +1327,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </div>
-</div>
-<div class="sect3">
-<h4 id="platform-tools-used">What platform and tools are used to perform the review and give feedback?</h4>
+<h4 id="platform-tools-used" class="discrete">What platform and tools are used to perform the review and give feedback?</h4>
 <div class="paragraph">
 <p>Determine how to share content and how to provide feedback.</p>
 </div>
@@ -988,9 +1348,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>For more information, see <a href="#pros-cons-peer-review-platforms">Pros and cons of the different peer review platforms</a>.</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="expected-turnaround-time">What is the expected turnaround time?</h4>
+<h4 id="expected-turnaround-time" class="discrete">What is the expected turnaround time?</h4>
 <div class="paragraph">
 <p>Determine the expected turnaround time for completing a peer review. Writers should communicate if there is any urgency or deadlines for the review.</p>
 </div>
@@ -1011,9 +1369,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </div>
-</div>
-<div class="sect3">
-<h4 id="urgent-peer-reviews-escalated">How do urgent peer reviews get escalated?</h4>
+<h4 id="urgent-peer-reviews-escalated" class="discrete">How do urgent peer reviews get escalated?</h4>
 <div class="paragraph">
 <p>Determine how an unassigned peer review request should be escalated if it could affect product release schedules.</p>
 </div>
@@ -1028,9 +1384,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </div>
-</div>
-<div class="sect3">
-<h4 id="peer-review-feedback-incorporated">How is peer review feedback incorporated?</h4>
+<h4 id="peer-review-feedback-incorporated" class="discrete">How is peer review feedback incorporated?</h4>
 <div class="paragraph">
 <p>Determine the expectations for addressing or incorporating feedback. Expectations become important if the writer and peer reviewer disagree on a review item.</p>
 </div>
@@ -1050,7 +1404,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Address peer review feedback and request the peer reviewer to perform a review of the revised content.</p>
 </li>
 </ul>
-</div>
 </div>
 </div>
 <div class="sect2">
@@ -1119,8 +1472,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>Review the following pros and cons for each platform to choose the right peer review method for your team.</p>
 </div>
-<div class="sect2">
-<h3 id="github-gitlab">GitHub or GitLab</h3>
+<h3 id="github-gitlab" class="discrete">GitHub or GitLab</h3>
 <div class="ulist">
 <div class="title">Pros</div>
 <ul>
@@ -1152,9 +1504,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </div>
-</div>
-<div class="sect2">
-<h3 id="google-docs">Google Docs</h3>
+<h3 id="google-docs" class="discrete">Google Docs</h3>
 <div class="ulist">
 <div class="title">Pros</div>
 <ul>
@@ -1189,9 +1539,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </div>
-</div>
-<div class="sect2">
-<h3 id="email">Email</h3>
+<h3 id="email" class="discrete">Email</h3>
 <div class="ulist">
 <div class="title">Pros</div>
 <ul>
@@ -1217,9 +1565,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </div>
-</div>
-<div class="sect2">
-<h3 id="irc-google-chat-slack">IRC, Google chat, or Slack</h3>
+<h3 id="irc-google-chat-slack" class="discrete">IRC, Google chat, or Slack</h3>
 <div class="ulist">
 <div class="title">Pros</div>
 <ul>
@@ -1245,9 +1591,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </div>
-</div>
-<div class="sect2">
-<h3 id="jira-bugzilla">Jira or Bugzilla ticket</h3>
+<h3 id="jira-bugzilla" class="discrete">Jira or Bugzilla ticket</h3>
 <div class="ulist">
 <div class="title">Pros</div>
 <ul>
@@ -1281,7 +1625,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
-</div>
 <div class="sect1">
 <h2 id="ref_an-index-of-peer-review-resources_{context}">Appendix B: An index of peer review resources</h2>
 <div class="sectionbody">
@@ -1289,7 +1632,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>This section lists the available tools and resources available for peer reviewing docs (apart from this Guide itself, of course).</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 1. Validation tools</caption>
+<caption class="title">Table 2. Validation tools</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1320,7 +1663,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 2. Style resources</caption>
+<caption class="title">Table 3. Style resources</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1343,7 +1686,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 3. Markup resources</caption>
+<caption class="title">Table 4. Markup resources</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1362,7 +1705,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 4. Structure resources</caption>
+<caption class="title">Table 5. Structure resources</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1389,7 +1732,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 5. Methodology resources</caption>
+<caption class="title">Table 6. Methodology resources</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1416,7 +1759,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-02-09 11:32:34 GMT
+Last updated 2022-03-07 14:33:59 GMT
 </div>
 </div>
 </body>
