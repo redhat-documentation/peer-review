@@ -1563,57 +1563,223 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="ref_example-peer-review-process1">Example peer review process 1</h3>
 <div class="paragraph">
-<p>The following diagram outlines an example process for a cross-product team that uses Jira tickets for communication and GitLab to perform peer reviews.</p>
+<p>The first example peer review process demonstrates how a cross-product team uses Jira tickets for communication and GitLab to perform peer reviews.</p>
 </div>
 <div class="paragraph">
 <p>This team has a peer review squad that consists of at least two members at any specific time. Membership of the squad rotates every week. The team maintains a peer review assignment roster in a Confluence page that lists the assigned reviewers for each week. The assignment roster is published in the Jira product dashboards, so that writers can see the assigned reviewers for the current week.</p>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+<div id="example-1-peer-review-process" class="imageblock">
+<div class="content">
+<img src="images/example_peer_review_process1_image.png" alt="A flowchart that is a visual representation of the first example peer review process described in the following procedure">
+</div>
+<div class="title">Figure 1. Example 1 of a peer review process conducted through Jira and GitLab</div>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
 <li>
-<p>Writers request a SME review before requesting peer review.</p>
+<p>A subject matter expert (SME) has completed a technical review.</p>
+<div class="paragraph">
+<p>To request and mark an SME review as complete, the writer performs the following tasks:</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Put a link to the MR in the <strong>Git Pull Request</strong> field in the Jira doc ticket.</p>
 </li>
 <li>
-<p>Writers submit requests for peer review by contacting the assigned reviewers in their Jira tickets.</p>
+<p>Submit the MR for SME review.</p>
 </li>
 <li>
-<p>The assigned reviewers agree among themselves who performs each review.</p>
+<p>Apply the SME reviewer&#8217;s feedback.</p>
 </li>
 <li>
-<p>The reviewer performs the review in GitLab by submitting feedback on an MR.</p>
+<p>Update the MR in GitLab.</p>
 </li>
 </ol>
 </div>
-<div id="example-1-peer-review-process" class="imageblock">
-<div class="content">
-<img src="images/example_peer_review_process1_image.png" alt="example peer review process1 image">
+</li>
+</ul>
 </div>
-<div class="title">Figure 1. Example 1 of a peer review process</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>To request a peer review, the writer performs the following tasks:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Check the peer review assignment roster in the Jira product dashboard.</p>
+</li>
+<li>
+<p>Add a comment in the Jira doc ticket to contact the assigned reviewers.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The writer needs to contact the reviewers who are currently on duty according to the roster.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Add the assigned reviewers to the <strong>Includes</strong> field in the Jira doc ticket.</p>
+</li>
+<li>
+<p>Optional: Contact the assigned reviewers in the MR or chat.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>If a peer review does not start within the expected timeframe and the review deadline is jeopardized, the writer performs the following task:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Contact the assigned reviewers again to communicate the urgency of the request.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If the review deadline is not jeopardized, the writer does not need to take any action at this point.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>To complete a review, the peer reviewer performs the following tasks:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Notify the other assigned reviewer that you will do the review.</p>
+</li>
+<li>
+<p>Remove the other assigned reviewer from the <strong>Includes</strong> field in the Jira doc ticket.</p>
+</li>
+<li>
+<p>Add review comments in the MR.</p>
+</li>
+<li>
+<p>Notify the writer when you complete the review.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>To apply feedback and complete the process, the writer performs the following tasks:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Apply the peer reviewer&#8217;s feedback.</p>
+</li>
+<li>
+<p>Update the MR in GitLab.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
 </div>
 </div>
 <div class="sect2">
 <h3 id="ref_example-peer-review-process2">Example peer review process 2</h3>
 <div class="paragraph">
-<p>The following diagram outlines an example process for a team that uses a Slack channel for communication and GitHub to perform peer reviews. The peer review team consists of five team members at any specific time. Membership of the peer review team rotates every sprint.</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Writers submit requests for peer review by using a Slack channel.</p>
-</li>
-<li>
-<p>Peer reviewers self-assign PRs to review as their bandwidth allows.</p>
-</li>
-<li>
-<p>The reviewer performs the review on GitHub by submitting feedback on a PR.</p>
-</li>
-</ol>
+<p>The second example peer review process demonstrates how a team uses a Slack channel for communication and GitHub to perform peer reviews. The peer review team consists of five team members at any specific time. Membership of the peer review team rotates every sprint.</p>
 </div>
 <div id="example-2-peer-review-process" class="imageblock">
 <div class="content">
-<img src="images/example_peer_review_process2_image.png" alt="example peer review process2 image">
+<img src="images/example_peer_review_process2_image.png" alt="A flowchart that is a visual representation of the second example peer review process described in the following procedure.">
 </div>
-<div class="title">Figure 2. Example 2 of a peer review process</div>
+<div class="title">Figure 2. Example 2 of a peer review process conducted through Slack and GitHub</div>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>To request a peer review, the writer performs the following tasks:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Notify the peer review squad using the Slack channel.</p>
+</li>
+<li>
+<p>Include a link to the PR in the Slack notification.</p>
+</li>
+<li>
+<p>Specify any deadline or other special considerations in the Slack notification.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>If a peer review does not start within the expected timeframe and the review deadline is jeopardized, the writer performs the following task:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Contact the assigned reviewer or the peer review squad again to communicate the urgency of the request.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If the review deadline is not jeopardized, the writer does not need to take any action at this point.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>To complete a review, the peer reviewer performs the following tasks:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Mark the request in Slack to indicate that you will perform the review.</p>
+</li>
+<li>
+<p>Add review comments in the PR.</p>
+</li>
+<li>
+<p>Notify the writer when you complete the review.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>To apply feedback and complete the process, the writer performs the following tasks:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Apply the peer reviewer’s feedback.</p>
+</li>
+<li>
+<p>Update the PR in GitHub.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -1917,7 +2083,7 @@ Complementary to the IBM Style Guide.</p></td>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-03-22 14:38:55 -0400
+Last updated 2022-03-28 08:38:02 -0400
 </div>
 </div>
 </body>
